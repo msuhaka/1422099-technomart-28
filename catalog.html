@@ -59,12 +59,51 @@
     <h1>Перфораторы</h1>
     <section class="filter">
       <h5>Фильтр:</h5>
-      <h3>Цена:</h3>
-      <!-- форма range -->
-      <h3>Производители:</h3>
-      <!-- форма checkbox -->
-      <h3>Питание:</h3>
-      <!-- форма radio -->
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend>Цена:</legend>
+          <!-- форма range -->
+        </fieldset>
+        <fieldset>
+          <legend>Производители:</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="Bosch" id="filter-bosch" checked>
+              <label for="filter-bosch">Bosch</label>
+            </li>
+            <li>
+              <input type="checkbox" name="Interskol" id="filter-interskol">
+              <label for="filter-interskol">Интерскол</label>
+            </li>
+            <li>
+              <input type="checkbox" name="Makita" id="filter-makita" checked>
+              <label for="filter-makita">Makita</label>
+            </li>
+            <li>
+              <input type="checkbox" name="Dewalt" id="filter-dewalt">
+              <label for="filter-dewalt">Dewalt</label>
+            </li>
+            <li>
+              <input type="checkbox" name="Hiachi" id="filter-hitachi">
+              <label for="filter-hitachi">Hitachi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Питание:</legend>
+          <ul>
+            <li>
+              <input type="radio" name="power-type" id="filter-battery" value="Аккумуляторные" checked>
+              <label for="filter-battery">Аккумуляторные</label>
+            </li>
+            <li>
+              <input type="radio" name="power-type" id="filter-line-operated" value="Сетевые">
+              <label for="filter-line-operated">Сетевые</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit">Показать</button>
+      </form>
     </section>
     <section class="perforator-items">
       <div class="sort">
@@ -211,6 +250,12 @@
         дрель.
       </p>
     </section>
+    <div>
+      <h3>Товар добавлен в корзину</h3>
+      <a href="">Оформить заказ</a>
+      <a href="">Продолжить покупки</a>
+      <button type="button"><span class="visually-hidden">Закрыть уведомление</span></button>
+    </div>
   </main>
   <footer>
     <div class="footer-top">
