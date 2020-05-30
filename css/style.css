@@ -189,8 +189,6 @@ legend {
 }
 
 button {
-    width: 100%;
-    height: 38px;
     font-size: 14px;
     line-height: 18px;
     color: var(--basic-white);
@@ -241,8 +239,6 @@ strong {
 }
 
 .footer-top {
-    width: 1200px;
-    height: 300px;
     font-size: 18px;
     line-height: 24px;
     font-family: 'Cuprum', sans-serif;
