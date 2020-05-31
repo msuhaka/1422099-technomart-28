@@ -1,242 +1,379 @@
 :root {
-    --basic-black: #000000;
-    --basic-white: #ffffff;
-    --basic-red: #ee3643;
-    --basic-green: #63a63e;
-    --basic-blue: #3d546f;
-    --basic-darkblue: #293449;
-    --basic-greylight: #c5c5c5;
-    --basic-background: #f1f5f7;
-    --special-orange: #ffbf47;
-    --special-blue: #3bbce3;
-    --special-lilac: #dc91d8;
-    --special-greenlight: #8ed78f;
-    --special-orangelight: #ffd180;
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-red: #ee3643;
+  --basic-green: #63a63e;
+  --basic-blue: #3d546f;
+  --basic-darkblue: #293449;
+  --basic-greylight: #c5c5c5;
+  --basic-background: #f1f5f7;
+  --special-orange: #ffbf47;
+  --special-blue: #3bbce3;
+  --special-lilac: #dc91d8;
+  --special-greenlight: #8ed78f;
+  --special-orangelight: #ffd180;
 }
 
 body {
-    min-width: 960px;
-    margin: 0;
-    padding: 0;
-    font-family: 'Cuprum', 'Trebuchet MS', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    color: var(--basic-black);
-    background-color: var(--basic-white);
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cuprum', 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
+/* header */
 .header {
-    background-color: var(--basic-background);
+  background-color: var(--basic-background);
 }
 
 .header-top {
-    font-size: 18px;
-    line-height: 24px;
-    color: var(--basic-white);
-    background-color: var(--basic-darkblue);
+  font-size: 18px;
+  line-height: 24px;
+  background-color: var(--basic-darkblue);
 }
 
-.search-button {
-    background-image: url("img/icon-search.svg");
+.header-top a {
+  margin: 0;
+  font-size: 18px;
+  color: var(--basic-white);
 }
 
+/* кнопка-ссылка офромить заказ*/
 .green-button {
-    background-color: var(--basic-green);
+  background-color: var(--basic-green);
 }
 
-.header-navigation {
-    font-size: 18px;
-    color: var(--basic-white);
-    background-color: transparent;
+.green-button:hover {
+  background-color: #5fbb2d;
 }
 
-.header-navigation-wrapper {
-    background-color: var(--basic-blue);
+.green-button:active {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.header-navigation, .footer-navigation {
-    list-style: none;
-}
-
-.header-navigation a:hover, .header-navigation a:focus, .header-navigation a:active {
-    background-color: var(--basic-darkblue);
-    opacity: 0.5;
-}
-
-.footer-navigation a:hover, .footer-navigation a:focus {
-    text-decoration: underline;
-}
-
-.footer-navigation a:active {
-    opacity: 0.5;
-}
-
+/* header-middle */
 .header-middle h2 {
-    font-family: 'Cuprum', 'Trebuchet MS', sans-serif;
-    font-style: italic;
-    color: var(--basic-red);
+  margin: 0;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: normal;
+  font-style: italic;
+  color: var(--basic-red);
 }
 
 .tel {
-    font-size: 21px;
-    line-height: 30px;
-    font-family: 'Cuprum', 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    color: var(--basic-red);
-    border: 3px solid var(--basic-white);
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: bold;
+  color: var(--basic-red);
+  border: 3px solid var(--basic-white);
 }
 
 .call-us p {
-    font-size: 14px;
-    color: #32425c;
+  margin: 0;
+  font-size: 14px;
+  color: #32425c;
 }
 
-.unlogged-user a, .user-profil {
-    font-size: 21px;
-    line-height: 21px;
-    color: var(--basic-black);
-    background-color: var(--basic-white);
+/* уголок пользовтеля */
+
+.unlogged-user a,
+.userpic {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
 }
 
 .profile-navigation {
-    font-size: 16px;
-    line-height: 18px;
-    color: #32425c;
-    font-style: normal;
-    font-family: 'Cuprum', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
+  font-style: normal;
+  font-family: 'Cuprum', sans-serif;
 }
 
-.useful-info-2 h2 {
-    font-size: 30px;
-    line-height: 30px;
-    color: var(--basic-black);
-    text-transform: uppercase;
+.profile-navigation a:hover,
+.unlogged-user a:hover {
+  color: var(--basic-red);
 }
 
-.useful-info-2 p {
-    font-size: 13px;
-    font-family: 'PT Sans', Tahoma, sans-serif;
-    font-style: normal;
-    color: var(--basic-black);
+.unlogged-user a:active,
+.logged-user a:active,
+.profile-navigation a:active {
+  color: var(--basic-greylight)
 }
 
-.transport-partners li {
-    font-size: 18px;
-    color: var(--basic-black);
+/* меню навигации по сайту*/
+.header-navigation-wrapper {
+  background-color: var(--basic-darkblue);
 }
 
-.main-navigation li {
-    font-size: 13px;
-    line-height: 18px;
-    font-family: 'PT Sans', Tahoma, sans-serif;
-    color: var(--basic-black);
-    text-transform: uppercase;
+.header-navigation {
+  margin: 0;
+  list-style: none;
+  background-color: var(--basic-blue);
+}
+
+.header-navigation a {
+  font-size: 18px;
+  color: var(--basic-white);
+}
+
+.header-navigation a:hover,
+.header-navigation a:focus {
+  background-color: var(--basic-darkblue);
+  color: var(--basic-white);
+}
+
+.header-navigation a:active {
+  background-color: var(--basic-darkblue);
+  opacity: 0.5;
+}
+
+/* main index */
+
+/* block useful-info-2*/
+.features h2,
+.contacts h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.features p,
+.contacts p {
+  margin: 0;
+  font-size: 13px;
+  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-style: normal;
+  color: var(--basic-black);
+}
+
+.features ul {
+  margin: 0;
+}
+
+.features li {
+  list-style: none;
+  font-size: 18px;
+  color: var(--basic-black);
+}
+
+.main-index .button,
+.useful-info-2 .button {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+}
+
+.write-us p {
+  margin: 0;
+}
+
+.closing-button .write-us {
+  background-image: url("../img/icon-close.svg");
+}
+
+/*main catalog */
+.breadcrumbs ul {
+  margin: 0;
+}
+
+.breadcrumbs li {
+  list-style: none;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: 'PT Sans', Tahoma, sans-serif;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.container h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #32425c;
+}
+
+.filter h5,
+.catalog h5 {
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 .filter legend {
-    font-size: 17px;
-    line-height: 30px;
-    font-family: 'PT Sans', Tahoma, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
+  margin: 0;
+  font-size: 17px;
+  line-height: 30px;
+  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .filter li {
-    font-size: 15px;
-    line-height: 19px;
-    font-family: 'PT Sans', Tahoma, sans-serif;
-    text-transform: uppercase;
+  font-size: 15px;
+  line-height: 19px;
+  font-family: 'PT Sans', Tahoma, sans-serif;
+  text-transform: uppercase;
 }
 
-.white-button {
-    font-size: 13px;
-    line-height: 18px;
-    font-family: 'PT Sans', Tahoma, sans-serif;
-    text-transform: uppercase;
+.filter .white-button {
+  background-color: transparent;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: 'PT Sans', Tahoma, sans-serif;
+  text-transform: uppercase;
 }
 
-.main-index button {
-    font-size: 14px;
-    line-height: 18px;
-    color: var(--basic-white);
-    background-color: var(--basic-red);
-    text-transform: uppercase;
+.product-list {
+  margin: 0;
+}
+
+.product-list li {
+  list-style: none;
 }
 
 .product-card h4 {
-    font-size: 18px;
-    line-height: 20px;
-    font-family: 'PT Sans', Tahoma, sans-serif;
-    font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-weight: bold;
 }
 
 .product-card del {
-    font-size: 17px;
-    line-height: 18px;
-    font-family: 'PT Sans', Tahoma, sans-serif;
-    font-weight: bold;
-    color: #a9a9a9;
+  font-size: 17px;
+  line-height: 18px;
+  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-weight: bold;
+  color: #a9a9a9;
 }
 
 .product-card ins {
-    font-size: 17px;
-    line-height: 18px;
-    font-family: 'PT Sans', Tahoma, sans-serif;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: var(--basic-red);
+  font-size: 17px;
+  line-height: 18px;
+  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: var(--basic-red);
 }
 
 .product-card strong {
-    font-size: 14px;
-    line-height: 18px;
-    color: var(--basic-white);
-    background-color: var(--basic-red);
-    text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  text-transform: uppercase;
 }
 
-.buying-notification h3 {
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: bold;
+.popup h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
 }
 
+.popup .button {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+}
+
+.popup .white-button {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+
+}
+
+/* footer */
 .footer-top {
-    font-size: 18px;
-    line-height: 24px;
-    color: var(--basic-background);
-    background-color: var(--basic-blue);
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-background);
+  background-color: var(--basic-blue);
 }
 
-.footer-navigation .row-2,
-.cotact-us {
-    color: var(--special-orangelight); 
+.footer-top p,
+.footer-navigation ul {
+  margin: 0;
 }
 
+.footer-navigation li {
+  list-style: none;
+}
+
+.tel-footer a,
+.row-1 a {
+  color: var(--basic-white);
+}
+
+.row-2 a,
+.footer-bottom a {
+  color: var(--special-orangelight);
+}
+
+.footer-navigation a:hover,
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.footer-navigation a:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.footer-bottom a:active {
+  color: var(--basic-red);
+  text-decoration: none;
+}
 
 .footer-bottom {
-    font-size: 16px;
-    line-height: 18px;
-    color: var(--basic-white);
-    background-color: var(--basic-darkblue);
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-darkblue);
 }
+
+.footer-bottom p,
+.socials ul {
+  margin: 0;
+}
+
+/* далее пойдут стили кнопок соц сетей*/
