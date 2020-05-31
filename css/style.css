@@ -18,8 +18,7 @@ body {
     min-width: 960px;
     margin: 0;
     padding: 0;
-    font-family: 'Cuprum', sans-serif;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Cuprum', 'Trebuchet MS', sans-serif;
     font-size: 16px;
     line-height: 24px;
     color: var(--basic-black);
@@ -54,23 +53,20 @@ img {
     font-size: 18px;
     line-height: 24px;
     color: var(--basic-white);
-    font-family: 'Cuprum', sans-serif;
     background-color: var(--basic-darkblue);
 }
 
-a.search-button {
+.search-button {
     background-image: url("img/icon-search.svg");
 }
 
-a.green-button {
+.green-button {
     background-color: var(--basic-green);
 }
 
 .header-navigation {
-    height: 60px;
     font-size: 18px;
     color: var(--basic-white);
-    font-family: 'Cuprum', sans-serif;
     background-color: transparent;
 }
 
@@ -96,7 +92,7 @@ a.green-button {
 }
 
 .header-middle h2 {
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', 'Trebuchet MS', sans-serif;
     font-style: italic;
     color: var(--basic-red);
 }
@@ -104,8 +100,7 @@ a.green-button {
 .tel {
     font-size: 21px;
     line-height: 30px;
-    font-family: 'Cuprum', sans-serif;
-    font-style: normal;
+    font-family: 'Cuprum', 'Trebuchet MS', sans-serif;
     font-weight: bold;
     color: var(--basic-red);
     border: 3px solid var(--basic-white);
@@ -114,16 +109,12 @@ a.green-button {
 .call-us p {
     font-size: 14px;
     color: #32425c;
-    font-style: normal;
-    font-family: 'Cuprum', sans-serif;
 }
 
 .unlogged-user a, .user-profil {
     font-size: 21px;
     line-height: 21px;
     color: var(--basic-black);
-    font-style: normal;
-    font-family: 'Cuprum', sans-serif;
     background-color: var(--basic-white);
 }
 
@@ -139,14 +130,12 @@ a.green-button {
     font-size: 30px;
     line-height: 30px;
     color: var(--basic-black);
-    font-style: normal;
-    font-family: 'Cuprum', sans-serif;
     text-transform: uppercase;
 }
 
 .useful-info-2 p {
     font-size: 13px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Tahoma, sans-serif;
     font-style: normal;
     color: var(--basic-black);
 }
@@ -154,22 +143,20 @@ a.green-button {
 .transport-partners li {
     font-size: 18px;
     color: var(--basic-black);
-    font-style: normal;
-    font-family: 'Ceprum', sans-serif;
 }
 
 .main-navigation li {
     font-size: 13px;
     line-height: 18px;
-    font-family: 'PT Sans', sans-serif;
-    text-transform: uppercase;
+    font-family: 'PT Sans', Tahoma, sans-serif;
     color: var(--basic-black);
+    text-transform: uppercase;
 }
 
-legend {
+.filter legend {
     font-size: 17px;
     line-height: 30px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Tahoma, sans-serif;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -177,55 +164,52 @@ legend {
 .filter li {
     font-size: 15px;
     line-height: 19px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Tahoma, sans-serif;
     text-transform: uppercase;
 }
 
 .white-button {
     font-size: 13px;
     line-height: 18px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Tahoma, sans-serif;
     text-transform: uppercase;
 }
 
-button {
+.main-index button {
     font-size: 14px;
     line-height: 18px;
     color: var(--basic-white);
-    font-style: normal;
-    font-family: 'Cuprum', sans-serif;
     background-color: var(--basic-red);
     text-transform: uppercase;
 }
 
-h4 {
+.product-card h4 {
     font-size: 18px;
     line-height: 20px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Tahoma, sans-serif;
     font-weight: bold;
 }
 
-del {
+.product-card del {
     font-size: 17px;
     line-height: 18px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Tahoma, sans-serif;
     font-weight: bold;
     color: #a9a9a9;
 }
 
-ins {
+.product-card ins {
     font-size: 17px;
     line-height: 18px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Tahoma, sans-serif;
     font-weight: bold;
     color: #ffffff;
     background-color: var(--basic-red);
 }
 
-strong {
+.product-card strong {
     font-size: 14px;
     line-height: 18px;
-    font-family: 'Cuprum', sans-serif;
     color: var(--basic-white);
     background-color: var(--basic-red);
     text-transform: uppercase;
@@ -234,26 +218,25 @@ strong {
 .buying-notification h3 {
     font-size: 24px;
     line-height: 30px;
-    font-family: 'Cuprum', sans-serif;
     font-weight: bold;
 }
 
 .footer-top {
     font-size: 18px;
     line-height: 24px;
-    font-family: 'Cuprum', sans-serif;
     color: var(--basic-background);
     background-color: var(--basic-blue);
 }
 
-.footer-navigation li:nth-child(n+6), .footer-bottom>p a {
-    color: var(--special-orangelight);
+.footer-navigation .row-2,
+.cotact-us {
+    color: var(--special-orangelight); 
 }
+
 
 .footer-bottom {
     font-size: 16px;
     line-height: 18px;
-    font-family: 'Cuprum', sans-serif;
     color: var(--basic-white);
     background-color: var(--basic-darkblue);
 }
