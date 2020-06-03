@@ -16,13 +16,13 @@
       <a class="logo-header" href="index.html"><img src="img/logo.svg" width="220" height="47"
           alt="Красный логотип магазина «Техномарт»."></a>
       <form action="https://echo.htmlacademy.ru" method="get">
-        <label for="search"></label>
-        <input type="search" name="search" id="search" placeholder="Поиск:">
-        <a class="search-button" href=""></a>
-        <a class="bookmark-button" href="">Закладки: 0</a>
-        <a class="basket-button" href="">Корзина: 10</a>
-        <a class="green-button" href="">Оформить заказ</a>
+        <label for="search">
+          <input type="search" name="search" id="search" placeholder="Поиск:">
+        </label>
       </form>
+      <a class="bookmark-button" href="">Закладки: 0</a>
+      <a class="basket-button" href="">Корзина: 10</a>
+      <a class="green-button" href="">Оформить заказ</a>
     </div>
     <div class="header-middle">
       <h2>Интернет-магазин
@@ -38,8 +38,8 @@
       </div>
       <div class="profile-navigation">
         <a href="">Мои заказы</a>
-        <a href="">&bullet;</a>
-        <a href="">Личный кабинет</a>
+        <span>&bullet;<span>
+            <a href="">Личный кабинет</a>
       </div>
     </div>
     <nav class="header-navigation-wrapper">
@@ -67,9 +67,7 @@
       </li>
       <li>Перфораторы</li>
     </ul>
-    <div class="container">
-      <h2>Перфораторы</h2>
-    </div>
+    <h2>Перфораторы</h2>
     <section class="filter">
       <h5>Фильтр:</h5>
       <form action="https://echo.htmlacademy.ru" method="get">
@@ -105,7 +103,7 @@
         </fieldset>
         <fieldset>
           <legend>Питание:</legend>
-          <ul class="filter">
+          <ul class="filter-items">
             <li>
               <input type="radio" name="power-type" id="filter-battery" value="Аккумуляторные" checked>
               <label for="filter-battery">Аккумуляторные</label>
@@ -163,9 +161,8 @@
             </p>
           </article>
         </li>
-        <li>
+        <li class="new">
           <article class="product-card">
-            <strong>New</strong>
             <img src="img/bosch-bfg6000.jpg" width="144" height="128"
               alt="Новинка. Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
             <h4>Перфоратор Bosch BFG 6000</h4>
@@ -175,9 +172,8 @@
             </p>
           </article>
         </li>
-        <li>
+        <li class="new">
           <article class="product-card">
-            <strong>New</strong>
             <img src="img/bosch-bfg3000.jpg" width="127" height="112"
               alt="Новинка. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Дополнительная рукоятка выпирает. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
             <h4>Перфоратор Bosch BFG 3000</h4>
@@ -198,9 +194,8 @@
             </p>
           </article>
         </li>
-        <li>
+        <li class="new">
           <article class="product-card">
-            <strong>New</strong>
             <img src="img/bosch-bfg2000.jpg" width="127" height="112"
               alt="Новинка. Внешне ничем не отличается от модели BFG3000.">
             <h4>Перфоратор Bosch BFG 2000</h4>
@@ -210,10 +205,9 @@
             </p>
           </article>
         </li>
-        <li>
+        <li class="new">
           <article class="product-card">
-            <strong>New</strong>
-            <img src="img/bosch-bfg3000.jpg" width="127" height="112"
+            <img  src="img/bosch-bfg3000.jpg" width="127" height="112"
               alt="Новинка. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Дополнительная рукоятка выпирает. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
             <h4>Перфоратор Bosch BFG 3000</h4>
             <p>
@@ -222,7 +216,7 @@
             </p>
           </article>
         </li>
-        <li>
+        <li >
           <article class="product-card">
             <img src="img/bosch-bfg6000.jpg" width="144" height="128"
               alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
@@ -233,9 +227,8 @@
             </p>
           </article>
         </li>
-        <li>
+        <li class="new">
           <article class="product-card">
-            <strong>New</strong>
             <img src="img/bosch-bfg2000.jpg" width="127" height="112"
               alt="Новинка. Внешне ничем не отличается от модели BFG3000.">
             <h4>Перфоратор Bosch BFG 2000</h4>
@@ -283,16 +276,16 @@
     <div class="footer-top">
       <a class="logo-footer" href="index.html"><img src="img/logo-footer.svg" width="220" height="68"
           alt="Красный логотип магазина «Техномарт»."></a>
-      <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
+      <p class="tel-footer">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
       <div class="footer-navigation">
-        <ul class="row-1">
+        <ul class="main-site-sections">
           <li><a href="">Компания</a></li>
           <li><a href="">Новости</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="">Доставка</a></li>
           <li><a href="">Контакты</a></li>
         </ul>
-        <ul class="row-2">
+        <ul class="main-store-sections">
           <li><a href="">Материалы</a></li>
           <li><a href="">Техника</a></li>
           <li><a href="">Инструмент</a></li>
