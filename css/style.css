@@ -11,7 +11,10 @@
   --special-blue: #3bbce3;
   --special-lilac: #dc91d8;
   --special-greenlight: #8ed78f;
+  --special-green: #5fbb2d;
   --special-orangelight: #ffd180;
+  --special-darkblue: #32425c;
+  --spicial-white: rgba(255, 255, 255, 0.5);
 }
 
 body {
@@ -57,7 +60,6 @@ img {
 }
 
 .header-top a {
-  margin: 0;
   font-size: 18px;
   color: var(--basic-white);
 }
@@ -68,11 +70,11 @@ img {
 }
 
 .green-button:hover {
-  background-color: #5fbb2d;
+  background-color: var(--special-green);
 }
 
 .green-button:active {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--spicial-white);
 }
 
 /* header-middle */
@@ -96,7 +98,7 @@ img {
 .call-us p {
   margin: 0;
   font-size: 14px;
-  color: #32425c;
+  color: var(--special-darkblue);
 }
 
 /* уголок пользовтеля */
@@ -112,9 +114,8 @@ img {
 .profile-navigation {
   font-size: 16px;
   line-height: 18px;
-  color: #32425c;
+  color: var(--special-darkblue);
   font-style: normal;
-  font-family: 'Cuprum', sans-serif;
 }
 
 .profile-navigation a:hover,
@@ -171,7 +172,7 @@ img {
 .contacts p {
   margin: 0;
   font-size: 13px;
-  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-family: 'PT Sans', 'Tahoma', sans-serif;
   font-style: normal;
   color: var(--basic-black);
 }
@@ -200,7 +201,7 @@ img {
 }
 
 .closing-button .write-us {
-  background-image: url("../img/icon-close.svg");
+  background-image: url('../img/icon-close.svg');
 }
 
 /*main catalog */
@@ -212,7 +213,7 @@ img {
   list-style: none;
   font-size: 13px;
   line-height: 18px;
-  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-family: 'PT Sans', 'Tahoma', sans-serif;
   color: var(--basic-black);
   text-transform: uppercase;
 }
@@ -230,7 +231,7 @@ img {
   margin: 0;
   font-size: 13px;
   line-height: 18px;
-  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-family: 'PT Sans', 'Tahoma', sans-serif;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -239,7 +240,7 @@ img {
   margin: 0;
   font-size: 17px;
   line-height: 30px;
-  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-family: 'PT Sans', 'Tahoma', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -247,7 +248,7 @@ img {
 .filter li {
   font-size: 15px;
   line-height: 19px;
-  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-family: 'PT Sans', 'Tahoma', sans-serif;
   text-transform: uppercase;
 }
 
@@ -255,7 +256,7 @@ img {
   background-color: transparent;
   font-size: 13px;
   line-height: 18px;
-  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-family: 'PT Sans', 'Tahoma', sans-serif;
   text-transform: uppercase;
 }
 
@@ -270,14 +271,14 @@ img {
 .product-card h4 {
   font-size: 18px;
   line-height: 20px;
-  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-family: 'PT Sans', 'Tahoma', sans-serif;
   font-weight: bold;
 }
 
 .product-card del {
   font-size: 17px;
   line-height: 18px;
-  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-family: 'PT Sans', 'Tahoma', sans-serif;
   font-weight: bold;
   color: #a9a9a9;
 }
@@ -285,18 +286,20 @@ img {
 .product-card ins {
   font-size: 17px;
   line-height: 18px;
-  font-family: 'PT Sans', Tahoma, sans-serif;
+  font-family: 'PT Sans', 'Tahoma', sans-serif;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--basic-white);
   background-color: var(--basic-red);
 }
 
-.product-card strong {
+.new::before {
+  content: "New";
   font-size: 14px;
   line-height: 18px;
+  text-transform: uppercase;
   color: var(--basic-white);
   background-color: var(--basic-red);
-  text-transform: uppercase;
+  transform: rotate(45deg);
 }
 
 .popup h3 {
@@ -340,21 +343,23 @@ img {
 }
 
 .tel-footer a,
-.row-1 a {
+.main-site-sections a {
   color: var(--basic-white);
 }
 
-.row-2 a,
+.main-store-sections a,
 .footer-bottom a {
   color: var(--special-orangelight);
 }
 
-.footer-navigation a:hover,
+.main-site-sections a:hover,
+.main-store-sections a:hover,
 .footer-bottom a:hover {
   text-decoration: underline;
 }
 
-.footer-navigation a:active {
+.main-site-sections a:active,
+.main-store-sections a:active {
   text-decoration: none;
   opacity: 0.5;
 }
