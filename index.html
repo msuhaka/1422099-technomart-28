@@ -16,13 +16,13 @@
       <a class="logo-header" href="index.html"><img src="img/logo.svg" width="220" height="47"
           alt="Красный логотип магазина «Техномарт»."></a>
       <form action="https://echo.htmlacademy.ru" method="get">
-        <label for="search"></label>
-        <input type="search" id="search" placeholder="Поиск:">
-        <a class="search-button" href=""></a>
-        <a class="bookmark-button" href="">Закладки: 0</a>
-        <a class="basket-button" href="">Корзина: 0</a>
-        <a class="green-button" href="">Оформить заказ</a>
+        <label for="search">
+          <input type="search" name="search" id="search" placeholder="Поиск:">
+        </label>
       </form>
+      <a class="bookmark-button" href="">Закладки: 0</a>
+      <a class="basket-button" href="">Корзина: 10</a>
+      <a class="green-button" href="">Оформить заказ</a>
     </div>
     <div class="header-middle">
       <h2>Интернет-магазин
@@ -49,11 +49,10 @@
       </nav>
     </div>
   </header>
-  <main class="main-index">
+  <main class="main">
     <h1 class="visually-hidden">Промо Блок</h1>
-    <ul class="promo-box">
-      <li>
-        <strong>New</strong>
+    <ul class="category-list">
+      <li class="new">
         <h3>Материалы</h3>
         <a class="promo-button" href="">На любой вкус</a>
       </li>
@@ -65,15 +64,19 @@
         <h3>Техника</h3>
         <a class="promo-button" href="">Для стройки</a>
       </li>
-      <li class="slider">
-        <h1>Перфораторы</h1>
-        <p>Настоящие мужские игрушки</p>
-        <a class="button" href="catalog.html">Открыть каталог</a>
-      </li>
-      <li class="slider">
-        <h1>Дрели</h1>
-        <p>Соседям на радость!</p>
-        <a class="button" href="catalog.html">Открыть каталог</a>
+      <li>
+        <ul class="slider-box">
+          <li>
+            <h1>Перфораторы</h1>
+            <p>Настоящие мужские игрушки</p>
+            <a class="button" href="catalog.html">Открыть каталог</a>
+          </li>
+          <li>
+            <h1>Дрели</h1>
+            <p>Соседям на радость!</p>
+            <a class="button" href="catalog.html">Открыть каталог</a>
+          </li>
+        </ul>
       </li>
       <li>
         <h3>Скидки 50%</h3>
@@ -101,9 +104,8 @@
             </p>
           </article>
         </li>
-        <li>
+        <li class="new">
           <article class="product-card">
-            <strong>New</strong>
             <img src="img/bosch-bfg3000.jpg" width="127" height="112"
               alt="Новинка. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Дополнительная рукоятка выпирает. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
             <h4>Перфоратор Bosch BFG 3000</h4>
@@ -124,9 +126,8 @@
             </p>
           </article>
         </li>
-        <li>
+        <li class="new">
           <article class="product-card">
-            <strong>New</strong>
             <img src="img/bosch-bfg3000.jpg" width="127" height="112"
               alt="Новинка. Внешне ничем не отличается от модели BFG3000.">
             <h4>Перфоратор Bosch BFG 2000</h4>
@@ -139,7 +140,7 @@
       </ul>
     </section>
     <section class="brand-partners">
-      <div class="container">
+      <div class="wrapper">
         <h2>Популярные производители:</h2>
         <a class="button" href="">Все производители</a>
       </div>
@@ -195,7 +196,7 @@
           <button class="service-button" type="button">Кредит</button>
         </li>
       </ul>
-      <ul class="service-description">
+      <ul class="list-of-service">
         <li>
           <h2>Доставка</h2>
           <p>
@@ -289,14 +290,14 @@
       <p class="tel-footer">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a href="tel:+78125550555">+7 (812)
           555-05-55</a></p>
       <div class="footer-navigation">
-        <ul class="row-1">
+        <ul class="main-site-sections">
           <li><a href="">Компания</a></li>
           <li><a href="">Новости</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="">Доставка</a></li>
           <li><a href="">Контакты</a></li>
         </ul>
-        <ul class="row-2">
+        <ul class="main-store-sections">
           <li><a href="">Материалы</a></li>
           <li><a href="">Техника</a></li>
           <li><a href="">Инструмент</a></li>
