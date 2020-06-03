@@ -15,6 +15,15 @@
   --special-orangelight: #ffd180;
   --special-darkblue: #32425c;
   --spicial-white: rgba(255, 255, 255, 0.5);
+  --special-black: rgba(0, 0, 0, 0.5);
+  --spicial-white-transparent: rgba(255, 255, 255, 0.3);
+  --special-red: #ba2732;
+  --spacial-grey: #a9a9a9;
+  --speial-rose: #f9f5f0;
+  --background-modal: #f1f1f1;
+  --background-modal-2: #f4f4f4;
+  --background-catalog: #f7f3ec;
+  --border-pagination: #e5e5e5;
 }
 
 body {
@@ -158,6 +167,189 @@ img {
 
 /* main index */
 
+.category-list,
+.slider-box {
+  margin: 0;
+  list-style: none;
+}
+
+.category-list .promo-button {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--spicial-white-transparent);
+  text-transform: uppercase;
+}
+
+.category-list .promo-button:hover {
+  background-color: var(--basic-greylight);
+  opacity: 0.3;
+}
+
+.category-list .promo-button:active {
+  background-color: var(--spacial-grey);
+  opacity: 0.3;
+}
+
+.category-list h3 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  color: var(--basic-white);
+}
+
+.category-list .category-material,
+.category-list .category-delivery {
+  background-color: var(--special-orange);
+}
+
+.category-list .category-tool {
+  background-color: var(--special-blue);
+}
+
+.category-list .category-machinery {
+  background-color: var(--special-lilac);
+}
+
+.category-list .category-discount {
+  background-color: var(--special-greenlight);
+}
+
+
+
+/*стилизация слайдера*/
+.slider-box li {
+  height: 226px;
+  width: 620px;
+}
+
+.slider-box li:first-child {
+  background: url('../img/worker-1.jpg');
+  left: 130px;
+  top: 522px;
+  background-size: 100%;
+
+}
+
+.slider-box li:last-child {
+  background: url('../img/worker-2.jpg');
+  left: 130px;
+  top: 522px;
+  background-size: 100%;
+}
+
+.slider-box h1 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--basic-white);
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--special-black);
+}
+
+.slider-box p {
+  margin: 0;
+  font-size: 18px;
+  color: var(--basic-white);
+  background-color: var(--special-black);
+}
+
+.slider-box .button {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+}
+
+.slider-box .button:active,
+.wrapper .button:active,
+.service-list .button:active {
+  background-color: var(--special-red);
+}
+
+/*Блок с Популярными товарами*/
+
+.wrapper {
+  background-color: var(--speial-rose);
+}
+
+.wrapper h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--special-darkblue);
+}
+
+.wrapper .button {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+}
+
+/*Блок с популярными брендами*/
+
+.brand-partners li {
+  list-style: none;
+}
+
+.brand-partners li:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.brand-partners li:active {
+  opacity: 0.5;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/*Срвисы*/
+
+.useful-info-1 {
+  background-color: var(--basic-background);
+}
+
+.useful-info-1 h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.useful-info-1 p,
+.service-list p {
+  margin: 0;
+  font-family: 'PT Sans', 'Tahoma', sans-serif;
+  font-size: 13px;
+  color: var(--basic-black);
+}
+
+.service-list li {
+  list-style: none;
+}
+
+.service-list h3 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 24px;
+  color: var(--basic-darkblue);
+  text-transform: uppercase;
+}
+
+.service-list .button {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+}
+
+
 /* block useful-info-2*/
 .features h2,
 .contacts h2 {
@@ -218,12 +410,13 @@ img {
   text-transform: uppercase;
 }
 
-.container h2 {
+.main-catalog h2 {
   margin: 0;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
   color: #32425c;
+  background-color: var(--basic-background);
 }
 
 .filter h5,
@@ -235,6 +428,43 @@ img {
   font-weight: normal;
   text-transform: uppercase;
 }
+
+.filter h5,
+.sort {
+  background-color: var(--background-catalog);
+}
+
+/*Полоска сортировки*/
+
+.sort a {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.sort a:hover {
+  color: var(--basic-black);
+  opacity: 1;
+}
+
+.list-sort a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--basic-red);
+  text-decoration-style: solid;
+}
+.list-sort a {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: 'PT Sans', 'Tahoma', sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: var(--basic-red);
+  text-decoration-style: dotted;
+}
+
+.sort li {
+  list-style: none;
+}
+
 
 .filter legend {
   margin: 0;
@@ -260,6 +490,8 @@ img {
   text-transform: uppercase;
 }
 
+/*Карточки с товаром*/
+
 .product-list {
   margin: 0;
 }
@@ -280,7 +512,7 @@ img {
   line-height: 18px;
   font-family: 'PT Sans', 'Tahoma', sans-serif;
   font-weight: bold;
-  color: #a9a9a9;
+  color: var(--spacial-grey);
 }
 
 .product-card ins {
@@ -302,11 +534,63 @@ img {
   transform: rotate(45deg);
 }
 
-.popup h3 {
+/* действия при наведении на карточку товара (верстать пока не умею)
+
+.product-card li:hover {
+}
+
+*/
+
+.pagination li {
+  list-style: none;
+}
+
+.pagination a {
+  border: 1px solid var(--border-pagination);
+  border-radius: 2px;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: 'PT Sans', 'Tahoma', sans-serif;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+
+.pagination a:hover { 
+  border: 1px solid var(--basic-greylight);
+  border-radius: 2px;
+}
+
+.pagination a:active { 
+  border: 1px solid var(--basic-red);
+  border-radius: 2px;
+}
+
+/*Индикатор активности (верстать пока не умею)*/
+
+
+
+.modal-write-us {
+  background-color: var(--background-modal-2);
+}
+.modal-write-us p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.modal-buying-notice {
+  background-color: var(--background-modal);
+}
+
+.modal-buying-notice h3 {
   margin: 0;
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
+  background-color: var(--basic-white);
 }
 
 .popup .button {
@@ -321,8 +605,8 @@ img {
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-black);
+  background-color: var(--basic-white);
   text-transform: uppercase;
-
 }
 
 /* footer */
@@ -382,3 +666,10 @@ img {
 }
 
 /* далее пойдут стили кнопок соц сетей*/
+
+
+.socials .vk {
+  background: url('../img/icon-vk.svg') no-repeat 100% 100%;
+
+}
+
