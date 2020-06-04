@@ -38,12 +38,11 @@
       </div>
       <div class="profile-navigation">
         <a href="">Мои заказы</a>
-        <span>&bullet;<span>
-            <a href="">Личный кабинет</a>
+        <a href="">Личный кабинет</a>
       </div>
     </div>
     <nav class="header-navigation-wrapper">
-      <ul class="header-navigation">
+      <ul class="header-navigation list-reset">
         <li><a href="index.html">Главная</a></li>
         <li><a href="">Компания</a></li>
         <li><a href="catalog.html">Каталог</a></li>
@@ -55,7 +54,7 @@
     </nav>
   </header>
   <main class="main-catalog">
-    <ul class="breadcrumbs">
+    <ul class="breadcrumbs list-reset">
       <li>
         <a class="button-home" href="index.html"><span class="visually-hidden">На главную</span></a>
       </li>
@@ -78,7 +77,7 @@
         </fieldset>
         <fieldset>
           <legend>Производители:</legend>
-          <ul class="filter-items">
+          <ul class="filter-items list-reset">
             <li>
               <input type="checkbox" name="Bosch" id="filter-bosch" checked>
               <label for="filter-bosch">Bosch</label>
@@ -103,7 +102,7 @@
         </fieldset>
         <fieldset>
           <legend>Питание:</legend>
-          <ul class="filter-items">
+          <ul class="filter-items list-reset">
             <li>
               <input type="radio" name="power-type" id="filter-battery" value="Аккумуляторные" checked>
               <label for="filter-battery">Аккумуляторные</label>
@@ -120,8 +119,8 @@
     <section class="catalog">
       <div class="sort">
         <h5>Сортировка:</h5>
-        <ul class="sort">
-          <li class="list-sort">
+        <ul class="sort list-reset">
+          <li class="sort-item">
             <a href="">По цене</a>
           </li>
           <li class="list-sort">
@@ -138,15 +137,15 @@
           </li>
         </ul>
       </div>
-      <ul class="product-list">
+      <ul class="product-list list-reset">
         <li>
           <article class="product-card">
             <img src="img/bosch-bfg6000.jpg" width="144" height="128"
               alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
             <h4>Перфоратор Bosch BFG 6000</h4>
             <p>
-              <del>30500 Р.</del>
-              <ins>25500 Р.</ins>
+              <del class="old-price">30500 Р.</del>
+              <ins class="new-price">25500 Р.</ins>
             </p>
           </article>
         </li>
@@ -156,8 +155,8 @@
               alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
             <h4>Перфоратор Bosch BFG 6000</h4>
             <p>
-              <del>30500 Р.</del>
-              <ins>25500 Р.</ins>
+              <del class="old-price">30500 Р.</del>
+              <ins class="new-price">25500 Р.</ins>
             </p>
           </article>
         </li>
@@ -167,8 +166,8 @@
               alt="Новинка. Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
             <h4>Перфоратор Bosch BFG 6000</h4>
             <p>
-              <del>30500 Р.</del>
-              <ins>25500 Р.</ins>
+              <del class="old-price">30500 Р.</del>
+              <ins class="new-price">25500 Р.</ins>
             </p>
           </article>
         </li>
@@ -178,8 +177,8 @@
               alt="Новинка. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Дополнительная рукоятка выпирает. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
             <h4>Перфоратор Bosch BFG 3000</h4>
             <p>
-              <del>22500 Р.</del>
-              <ins>15500 Р.</ins>
+              <del class="old-price">22500 Р.</del>
+              <ins class="new-price">15500 Р.</ins>
             </p>
           </article>
         </li>
@@ -189,8 +188,8 @@
               alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
             <h4>Перфоратор Bosch BFG 6000</h4>
             <p>
-              <del>30500 Р.</del>
-              <ins>25500 Р.</ins>
+              <del class="old-price">30500 Р.</del>
+              <ins class="new-price">25500 Р.</ins>
             </p>
           </article>
         </li>
@@ -200,30 +199,30 @@
               alt="Новинка. Внешне ничем не отличается от модели BFG3000.">
             <h4>Перфоратор Bosch BFG 2000</h4>
             <p>
-              <del>22500 P.</del>
-              <ins>12500 Р.</ins>
+              <del class="old-price">22500 P.</del>
+              <ins class="new-price">12500 Р.</ins>
             </p>
           </article>
         </li>
         <li class="new">
           <article class="product-card">
-            <img  src="img/bosch-bfg3000.jpg" width="127" height="112"
+            <img src="img/bosch-bfg3000.jpg" width="127" height="112"
               alt="Новинка. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Дополнительная рукоятка выпирает. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
             <h4>Перфоратор Bosch BFG 3000</h4>
             <p>
-              <del>22500 Р.</del>
-              <ins>15500 Р.</ins>
+              <del class="old-price">22500 Р.</del>
+              <ins class="new-price">15500 Р.</ins>
             </p>
           </article>
         </li>
-        <li >
+        <li>
           <article class="product-card">
             <img src="img/bosch-bfg6000.jpg" width="144" height="128"
               alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
             <h4>Перфоратор Bosch BFG 6000</h4>
             <p>
-              <del>30500 Р.</del>
-              <ins>25500 Р.</ins>
+              <del class="old-price">30500 Р.</del>
+              <ins class="new-price">25500 Р.</ins>
             </p>
           </article>
         </li>
@@ -233,13 +232,13 @@
               alt="Новинка. Внешне ничем не отличается от модели BFG3000.">
             <h4>Перфоратор Bosch BFG 2000</h4>
             <p>
-              <del>22500 P.</del>
-              <ins>12500 Р.</ins>
+              <del class="old-price">22500 P.</del>
+              <ins class="new-price">12500 Р.</ins>
             </p>
           </article>
         </li>
       </ul>
-      <ul class="pagination">
+      <ul class="pagination list-reset">
         <li>
           <a href="">1</a>
         </li>
@@ -276,16 +275,17 @@
     <div class="footer-top">
       <a class="logo-footer" href="index.html"><img src="img/logo-footer.svg" width="220" height="68"
           alt="Красный логотип магазина «Техномарт»."></a>
-      <p class="tel-footer">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a href="tel:+78125550555">+7 (812) 555-05-55</a></p>
+      <p class="tel-footer">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <a href="tel:+78125550555">+7 (812)
+          555-05-55</a></p>
       <div class="footer-navigation">
-        <ul class="main-site-sections">
+        <ul class="main-site-sections list-reset">
           <li><a href="">Компания</a></li>
           <li><a href="">Новости</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="">Доставка</a></li>
           <li><a href="">Контакты</a></li>
         </ul>
-        <ul class="main-store-sections">
+        <ul class="main-store-sections list-reset">
           <li><a href="">Материалы</a></li>
           <li><a href="">Техника</a></li>
           <li><a href="">Инструмент</a></li>
@@ -297,8 +297,8 @@
       <p>© 2010–2019 Компания «Техномарт»
         Все права защищены
       </p>
-      <div>
-        <ul class="socials">
+      <div class="socials">
+        <ul class="list-reset">
           <li><a class="social-button vk" href=""><span class="visually-hidden">вконтакте</span></a></li>
           <li><a class="social-button fb" href=""><span class="visually-hidden">фейсбук</span></a></li>
           <li><a class="social-button instagram" href=""><span class="visually-hidden">инстаграм</span></a></li>
