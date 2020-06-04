@@ -24,6 +24,7 @@
   --background-modal-2: #f4f4f4;
   --background-catalog: #f7f3ec;
   --border-pagination: #e5e5e5;
+  --box-shadow: rgba(0, 0, 0, 0.15);
 }
 
 body {
@@ -124,7 +125,6 @@ img {
   font-size: 16px;
   line-height: 18px;
   color: var(--special-darkblue);
-  font-style: normal;
 }
 
 .profile-navigation a:hover,
@@ -144,8 +144,6 @@ img {
 }
 
 .header-navigation {
-  margin: 0;
-  list-style: none;
   background-color: var(--basic-blue);
 }
 
@@ -166,12 +164,6 @@ img {
 }
 
 /* main index */
-
-.category-list,
-.slider-box {
-  margin: 0;
-  list-style: none;
-}
 
 .category-list .promo-button {
   font-size: 14px;
@@ -226,16 +218,11 @@ img {
 
 .slider-box li:first-child {
   background: url('../img/worker-1.jpg');
-  left: 130px;
-  top: 522px;
   background-size: 100%;
-
 }
 
 .slider-box li:last-child {
   background: url('../img/worker-2.jpg');
-  left: 130px;
-  top: 522px;
   background-size: 100%;
 }
 
@@ -294,17 +281,13 @@ img {
 
 /*Блок с популярными брендами*/
 
-.brand-partners li {
-  list-style: none;
+.brand-partners a:hover {
+  box-shadow: 0px 4px 20px var(--box-shadow);
 }
 
-.brand-partners li:hover {
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-}
-
-.brand-partners li:active {
+.brand-partners a:active {
   opacity: 0.5;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px var(--box-shadow);
 }
 
 /*Срвисы*/
@@ -327,10 +310,6 @@ img {
   font-family: 'PT Sans', 'Tahoma', sans-serif;
   font-size: 13px;
   color: var(--basic-black);
-}
-
-.service-list li {
-  list-style: none;
 }
 
 .service-list h3 {
@@ -365,16 +344,16 @@ img {
   margin: 0;
   font-size: 13px;
   font-family: 'PT Sans', 'Tahoma', sans-serif;
-  font-style: normal;
   color: var(--basic-black);
 }
 
-.features ul {
+.list-reset {
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .features li {
-  list-style: none;
   font-size: 18px;
   color: var(--basic-black);
 }
@@ -397,12 +376,8 @@ img {
 }
 
 /*main catalog */
-.breadcrumbs ul {
-  margin: 0;
-}
 
 .breadcrumbs li {
-  list-style: none;
   font-size: 13px;
   line-height: 18px;
   font-family: 'PT Sans', 'Tahoma', sans-serif;
@@ -415,7 +390,7 @@ img {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
-  color: #32425c;
+  color: var(--special-darkblue);
   background-color: var(--basic-background);
 }
 
@@ -451,7 +426,8 @@ img {
   text-decoration-color: var(--basic-red);
   text-decoration-style: solid;
 }
-.list-sort a {
+
+.sort-item a {
   font-size: 13px;
   line-height: 18px;
   font-family: 'PT Sans', 'Tahoma', sans-serif;
@@ -460,11 +436,6 @@ img {
   text-decoration-color: var(--basic-red);
   text-decoration-style: dotted;
 }
-
-.sort li {
-  list-style: none;
-}
-
 
 .filter legend {
   margin: 0;
@@ -492,14 +463,6 @@ img {
 
 /*Карточки с товаром*/
 
-.product-list {
-  margin: 0;
-}
-
-.product-list li {
-  list-style: none;
-}
-
 .product-card h4 {
   font-size: 18px;
   line-height: 20px;
@@ -507,7 +470,7 @@ img {
   font-weight: bold;
 }
 
-.product-card del {
+.product-card .old-price {
   font-size: 17px;
   line-height: 18px;
   font-family: 'PT Sans', 'Tahoma', sans-serif;
@@ -515,7 +478,7 @@ img {
   color: var(--spacial-grey);
 }
 
-.product-card ins {
+.product-card .new-price {
   font-size: 17px;
   line-height: 18px;
   font-family: 'PT Sans', 'Tahoma', sans-serif;
@@ -541,10 +504,6 @@ img {
 
 */
 
-.pagination li {
-  list-style: none;
-}
-
 .pagination a {
   border: 1px solid var(--border-pagination);
   border-radius: 2px;
@@ -555,24 +514,22 @@ img {
   text-transform: uppercase;
 }
 
-
-.pagination a:hover { 
+.pagination a:hover {
   border: 1px solid var(--basic-greylight);
   border-radius: 2px;
 }
 
-.pagination a:active { 
+.pagination a:active {
   border: 1px solid var(--basic-red);
-  border-radius: 2px;
 }
 
 /*Индикатор активности (верстать пока не умею)*/
 
 
-
 .modal-write-us {
   background-color: var(--background-modal-2);
 }
+
 .modal-write-us p {
   margin: 0;
   font-size: 18px;
@@ -617,13 +574,8 @@ img {
   background-color: var(--basic-blue);
 }
 
-.footer-top p,
-.footer-navigation ul {
+.footer-top p {
   margin: 0;
-}
-
-.footer-navigation li {
-  list-style: none;
 }
 
 .tel-footer a,
@@ -660,8 +612,7 @@ img {
   background-color: var(--basic-darkblue);
 }
 
-.footer-bottom p,
-.socials ul {
+.footer-bottom p {
   margin: 0;
 }
 
@@ -672,4 +623,3 @@ img {
   background: url('../img/icon-vk.svg') no-repeat 100% 100%;
 
 }
-
