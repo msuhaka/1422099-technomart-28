@@ -58,25 +58,103 @@ img {
   overflow: hidden;
 }
 
-/* header */
+.page {
+  height: 100%
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+/* временная подсветка блоков in header
+.main-catalog,
+.useful-info-1 {
+  outline: 2px solid rgba(0, 0, 245, 0.9);
+  outline-offset: -2px;
+}
+
+.breadcrumbs,
+.catalog-wrapper {
+  outline: 9px solid rgba(255, 0, 255, 0.7);
+  outline-offset: -9px;
+}
+
+.main-catalog h2 {
+  outline: 2px solid rgba(0, 255, 125, 0.7);
+  outline-offset: -2px;
+}
+
+.filter,
+.catalog {
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+}
+
+.page-catalog {
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 0, 0, 1);
+}
+
+.product-list {
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 0, 255, 0.7);
+}
+*/
+
 .header {
   background-color: var(--basic-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
 }
 
 .header-top {
-  font-size: 18px;
-  line-height: 24px;
+  width: 100%;
+  height: 42px;
+  margin-bottom: 41px;
   background-color: var(--basic-darkblue);
 }
 
-.header-top a {
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header-top a:not(.logo-header) {
   font-size: 18px;
   color: var(--basic-white);
+  padding: 9px 19px;
 }
+
+.header-top .container {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  max-height: 100%;
+
+}
+
+.container .logo-header {
+  position: relative;
+  bottom: -5.5px;
+}
+
+.container form {
+  margin-right: auto;
+  margin-left: 42px;
+}
+
 
 /* кнопка-ссылка офромить заказ*/
 .green-button {
-  background-color: var(--basic-green);
+  background-color: var(--basic-green)
 }
 
 .green-button:hover {
@@ -88,8 +166,18 @@ img {
 }
 
 /* header-middle */
+
+.header-middle {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+
 .header-middle h2 {
+  width: 197px;
   margin: 0;
+  margin-left: 30px;
+  margin-right: 93px;
   font-size: 16px;
   line-height: 23px;
   font-weight: normal;
@@ -103,23 +191,45 @@ img {
   font-weight: bold;
   color: var(--basic-red);
   border: 3px solid var(--basic-white);
+  padding: 7px 45px 8px 74px;
+
 }
 
 .call-us p {
   margin: 0;
   font-size: 14px;
   color: var(--special-darkblue);
+  text-align: center;
+  padding-top: 6px;
+}
+
+.header-middle .call-us {
+  align-self: center;
+  margin-right: auto;
 }
 
 /* уголок пользовтеля */
 
-.unlogged-user a,
+.log-in,
+.sing-in,
 .userpic {
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
   background-color: var(--basic-white);
+  align-self: flex-start;
 }
+
+.header-middle .sing-in {
+  padding: 12px 24px;
+
+}
+
+.header-middle .log-in {
+  padding: 12px 27px;
+  margin-right: 10px;
+}
+
 
 .profile-navigation {
   font-size: 16px;
@@ -127,7 +237,7 @@ img {
   color: var(--special-darkblue);
 }
 
-.profile-navigation a:hover,
+.user-profile a:hover,
 .unlogged-user a:hover {
   color: var(--basic-red);
 }
@@ -139,6 +249,20 @@ img {
 }
 
 /* меню навигации по сайту*/
+.header-middle .logged-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-middle .userpic {
+  padding: 12px 57px 12px 56px;
+}
+
+.header-middle .user-profile {
+  margin: 7px auto;
+}
+
+
 .header-navigation-wrapper {
   background-color: var(--basic-darkblue);
 }
@@ -304,7 +428,6 @@ img {
   text-transform: uppercase;
 }
 
-.useful-info-1 p,
 .service-list p {
   margin: 0;
   font-family: 'PT Sans', 'Tahoma', sans-serif;
@@ -330,6 +453,28 @@ img {
 
 
 /* block useful-info-2*/
+
+.useful-info-2 .container {
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  margin: 70px auto;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 457px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+}
+
 .features h2,
 .contacts h2 {
   margin: 0;
@@ -339,12 +484,58 @@ img {
   text-transform: uppercase;
 }
 
-.features p,
-.contacts p {
+.features p {
   margin: 0;
   font-size: 13px;
   font-family: 'PT Sans', 'Tahoma', sans-serif;
   color: var(--basic-black);
+}
+
+.features .info-pub {
+  width: 385px;
+}
+
+.contacts p {
+  padding-top: 24px;
+  margin: 0;
+  font-size: 13px;
+  font-family: 'PT Sans', 'Tahoma', sans-serif;
+  color: var(--basic-black);
+  padding-right: 120px;
+}
+
+.features li {
+  font-size: 18px;
+  color: var(--basic-black);
+  padding-bottom: 12px;
+  padding-left: 37px;
+}
+
+.transport-partners li::before {}
+
+.features .button {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+  padding: 10px 40px;
+  align-self: flex-start;
+  margin: 0px;
+}
+
+.contacts .button {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+  padding: 10px 60px;
+}
+
+.contacts img {
+  margin-top: 32px;
+  margin-bottom: 25px;
 }
 
 .list-reset {
@@ -353,13 +544,9 @@ img {
   list-style: none;
 }
 
-.features li {
-  font-size: 18px;
-  color: var(--basic-black);
-}
+/*style of buttons */
 
-.main-index .button,
-.useful-info-2 .button {
+.main-index .button {
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-white);
@@ -375,9 +562,18 @@ img {
   background-image: url('../img/icon-close.svg');
 }
 
+
 /*main catalog */
 
+.main-catalog {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-content: start;
+  gap: 20px;
+}
+
 .breadcrumbs li {
+  padding: 0px;
   font-size: 13px;
   line-height: 18px;
   font-family: 'PT Sans', 'Tahoma', sans-serif;
@@ -385,7 +581,54 @@ img {
   text-transform: uppercase;
 }
 
-.main-catalog h2 {
+.main-catalog .breadcrumbs,
+.main-catalog .page-title {
+  grid-column: 1/-1;
+}
+
+.filter {
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.catalog {
+  grid-column: -2/-1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.useful-info-1 p {
+  padding-right: 30px;
+  padding-bottom: 68px;
+  margin: 0;
+  font-family: 'PT Sans', 'Tahoma', sans-serif;
+  font-size: 13px;
+  color: var(--basic-black);
+}
+
+.useful-info-1 h2 {
+  padding-top: 64px;
+  padding-bottom: 25px;
+  margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  background-color: var(--basic-background);
+}
+
+.useful-info-1 {
+  width: 100%;
+  background-color: var(--basic-background);
+  grid-column: 1/-1;
+}
+
+
+.main-catalog .page-title {
+  padding: 30px 739px 30px 29px;
   margin: 0;
   font-size: 30px;
   line-height: 30px;
@@ -409,8 +652,11 @@ img {
   background-color: var(--background-catalog);
 }
 
-/*Полоска сортировки*/
+.filter h5 {
+  padding: 10px 151px 10px 18px;
+}
 
+/*Полоска сортировки*/
 .sort a {
   color: var(--basic-black);
   opacity: 0.3;
@@ -435,6 +681,10 @@ img {
   text-decoration: underline;
   text-decoration-color: var(--basic-red);
   text-decoration-style: dotted;
+}
+
+.filter form {
+  margin: 0;
 }
 
 .filter legend {
@@ -462,6 +712,13 @@ img {
 }
 
 /*Карточки с товаром*/
+
+.product-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  margin-top: 28px;
+  margin-bottom: 47px;
+}
 
 .product-card h4 {
   font-size: 18px;
@@ -567,16 +824,27 @@ img {
 }
 
 /* footer */
+
+.footer-top .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 54px;
+}
+
 .footer-top {
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-background);
-  background-color: var(--basic-blue);
+  background-color: var(--special-darkblue);
 }
 
 .footer-top p {
+  width: 325px;
   margin: 0;
+  margin-top: 22px;
 }
+
 
 .tel-footer a,
 .main-site-sections a {
@@ -606,20 +874,39 @@ img {
 }
 
 .footer-bottom {
+  padding: 35px 0;
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
   background-color: var(--basic-darkblue);
 }
 
-.footer-bottom p {
+.footer-bottom .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr min-content min-content;
+  gap: 50px;
+}
+
+.footer-bottom .copyright {
+  width: 234px;
   margin: 0;
 }
 
 /* далее пойдут стили кнопок соц сетей*/
 
+.container .socials {
+  width: 134px;
 
-.socials .vk {
-  background: url('../img/icon-vk.svg') no-repeat 100% 100%;
-
+  justify-self: center;
+  text-align: center;
 }
+
+.socials ul {
+  margin: 0 auto;
+}
+
+.socials .vk {}
+
+.socials .fb {}
+
+.socials .instagram {}
