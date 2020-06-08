@@ -55,218 +55,224 @@
       </nav>
     </div>
   </header>
-  <main class="main-catalog container">
-    <ul class="breadcrumbs list-reset container">
-      <li>
-        <a class="button-home" href="index.html"><span class="visually-hidden">На главную</span></a>
-      </li>
-      <li>
-        <a href="">Каталог</a>
-      </li>
-      <li>
-        <a href="">Инструмент</a>
-      </li>
-      <li>Перфораторы</li>
-    </ul>
-    <h2 class="page-title">Перфораторы</h2>
-    <section class="filter">
-      <h5>Фильтр:</h5>
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <fieldset>
-          <legend>Цена:</legend>
-          <label for="price"></label>
-          <!--будущая форма с двумя ползунками-->
-        </fieldset>
-        <fieldset>
-          <legend>Производители:</legend>
-          <ul class="filter-items list-reset">
-            <li>
-              <input type="checkbox" name="Bosch" id="filter-bosch" checked>
-              <label for="filter-bosch">Bosch</label>
+  <main class="main-catalog">
+    <div class="catalog-top-wrapper container">
+      <ul class="breadcrumbs list-reset">
+        <li>
+          <a class="button-home" href="index.html"><span class="visually-hidden">На главную</span></a>
+        </li>
+        <li>
+          <a href="">Каталог</a>
+        </li>
+        <li>
+          <a href="">Инструмент</a>
+        </li>
+        <li>Перфораторы</li>
+      </ul>
+      <h2 class="page-title">Перфораторы</h2>
+    </div>
+    <div class="catalog-wrapper container">
+      <section class="filter">
+        <h5>Фильтр:</h5>
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend>Цена:</legend>
+            <label for="price"></label>
+            <!--будущая форма с двумя ползунками-->
+          </fieldset>
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul class="filter-items list-reset">
+              <li>
+                <input type="checkbox" name="Bosch" id="filter-bosch" checked>
+                <label for="filter-bosch">Bosch</label>
+              </li>
+              <li>
+                <input type="checkbox" name="Interskol" id="filter-interskol">
+                <label for="filter-interskol">Интерскол</label>
+              </li>
+              <li>
+                <input type="checkbox" name="Makita" id="filter-makita" checked>
+                <label for="filter-makita">Makita</label>
+              </li>
+              <li>
+                <input type="checkbox" name="Dewalt" id="filter-dewalt">
+                <label for="filter-dewalt">Dewalt</label>
+              </li>
+              <li>
+                <input type="checkbox" name="Hiachi" id="filter-hitachi">
+                <label for="filter-hitachi">Hitachi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
+            <ul class="filter-items list-reset">
+              <li>
+                <input type="radio" name="power-type" id="filter-battery" value="Аккумуляторные" checked>
+                <label for="filter-battery">Аккумуляторные</label>
+              </li>
+              <li>
+                <input type="radio" name="power-type" id="filter-line-operated" value="Сетевые">
+                <label for="filter-line-operated">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="white-button" type="submit">Показать</button>
+        </form>
+      </section>
+      <section class="catalog">
+        <div class="sort">
+          <h5>Сортировка:</h5>
+          <ul class="sort list-reset">
+            <li class="sort-item">
+              <a href="">По цене</a>
             </li>
-            <li>
-              <input type="checkbox" name="Interskol" id="filter-interskol">
-              <label for="filter-interskol">Интерскол</label>
+            <li class="list-sort">
+              <a href="">По типу</a>
             </li>
-            <li>
-              <input type="checkbox" name="Makita" id="filter-makita" checked>
-              <label for="filter-makita">Makita</label>
+            <li class="list-sort">
+              <a href="">По функционалу</a>
             </li>
-            <li>
-              <input type="checkbox" name="Dewalt" id="filter-dewalt">
-              <label for="filter-dewalt">Dewalt</label>
+            <li class="up-down">
+              <a href="">Сортировать по возрастанию</a>
             </li>
-            <li>
-              <input type="checkbox" name="Hiachi" id="filter-hitachi">
-              <label for="filter-hitachi">Hitachi</label>
+            <li class="up-down">
+              <a href="">Сортировать по убыванию</a>
             </li>
           </ul>
-        </fieldset>
-        <fieldset>
-          <legend>Питание:</legend>
-          <ul class="filter-items list-reset">
-            <li>
-              <input type="radio" name="power-type" id="filter-battery" value="Аккумуляторные" checked>
-              <label for="filter-battery">Аккумуляторные</label>
-            </li>
-            <li>
-              <input type="radio" name="power-type" id="filter-line-operated" value="Сетевые">
-              <label for="filter-line-operated">Сетевые</label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="white-button" type="submit">Показать</button>
-      </form>
-    </section>
-    <section class="catalog">
-      <div class="sort">
-        <h5>Сортировка:</h5>
-        <ul class="sort list-reset">
-          <li class="sort-item">
-            <a href="">По цене</a>
+        </div>
+        <ul class="product-list list-reset">
+          <li>
+            <article class="product-card">
+              <img src="img/bosch-bfg6000.jpg" width="144" height="128"
+                alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
+              <div class="product-card-inner">
+                <h4>Перфоратор Bosch BFG 6000</h4>
+                <del class="old-price">30500 Р.</del>
+                <ins class="new-price">25500 Р.</ins>
+              </div>
+            </article>
           </li>
-          <li class="list-sort">
-            <a href="">По типу</a>
+          <li>
+            <article class="product-card">
+              <img src="img/bosch-bfg6000.jpg" width="144" height="128"
+                alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
+              <div class="product-card-inner">
+                <h4>Перфоратор Bosch BFG 6000</h4>
+                <del class="old-price">30500 Р.</del>
+                <ins class="new-price">25500 Р.</ins>
+              </div>
+            </article>
           </li>
-          <li class="list-sort">
-            <a href="">По функционалу</a>
+          <li class="new">
+            <article class="product-card">
+              <img src="img/bosch-bfg6000.jpg" width="144" height="128"
+                alt="Новинка. Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
+              <div class="product-card-inner">
+                <h4>Перфоратор Bosch BFG 6000</h4>
+                <del class="old-price">30500 Р.</del>
+                <ins class="new-price">25500 Р.</ins>
+              </div>
+            </article>
           </li>
-          <li class="up-down">
-            <a href="">Сортировать по возрастанию</a>
+          <li class="new">
+            <article class="product-card">
+              <img src="img/bosch-bfg3000.jpg" width="127" height="112"
+                alt="Новинка. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Дополнительная рукоятка выпирает. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
+              <div class="product-card-inner">
+                <h4>Перфоратор Bosch BFG 3000</h4>
+                <del class="old-price">22500 Р.</del>
+                <ins class="new-price">15500 Р.</ins>
+              </div>
+            </article>
           </li>
-          <li class="up-down">
-            <a href="">Сортировать по убыванию</a>
+          <li>
+            <article class="product-card">
+              <img src="img/bosch-bfg6000.jpg" width="144" height="128"
+                alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
+              <div class="product-card-inner">
+                <h4>Перфоратор Bosch BFG 6000</h4>
+                <del class="old-price">30500 Р.</del>
+                <ins class="new-price">25500 Р.</ins>
+              </div>
+            </article>
+          </li>
+          <li class="new">
+            <article class="product-card">
+              <img src="img/bosch-bfg2000.jpg" width="127" height="112"
+                alt="Новинка. Внешне ничем не отличается от модели BFG3000.">
+              <div class="product-card-inner">
+                <h4>Перфоратор Bosch BFG 2000</h4>
+                <del class="old-price">22500 P.</del>
+                <ins class="new-price">12500 Р.</ins>
+              </div>
+            </article>
+          </li>
+          <li class="new">
+            <article class="product-card">
+              <img src="img/bosch-bfg3000.jpg" width="127" height="112"
+                alt="Новинка. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Дополнительная рукоятка выпирает. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
+              <div class="product-card-inner">
+                <h4>Перфоратор Bosch BFG 3000</h4>
+                <del class="old-price">22500 Р.</del>
+                <ins class="new-price">15500 Р.</ins>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="product-card">
+              <img src="img/bosch-bfg6000.jpg" width="144" height="128"
+                alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
+              <div class="product-card-inner">
+                <h4>Перфоратор Bosch BFG 6000</h4>
+                <del class="old-price">30500 Р.</del>
+                <ins class="new-price">25500 Р.</ins>
+              </div>
+            </article>
+          </li>
+          <li class="new">
+            <article class="product-card">
+              <img src="img/bosch-bfg2000.jpg" width="127" height="112"
+                alt="Новинка. Внешне ничем не отличается от модели BFG3000.">
+              <div class="product-card-inner">
+                <h4>Перфоратор Bosch BFG 2000</h4>
+                <del class="old-price">22500 P.</del>
+                <ins class="new-price">12500 Р.</ins>
+              </div>
+            </article>
           </li>
         </ul>
+        <ul class="pagination list-reset">
+          <li>
+            <a href="">1</a>
+          </li>
+          <li>
+            <a href="">2</a>
+          </li>
+          <li>
+            <a href="">3</a>
+          </li>
+          <li>
+            <a href="">Следующая</a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <section class="useful-info-1">
+      <div class="container">
+        <h2>Пара слов о перфораторах</h2>
+        <p>
+          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
+          кирпиче,
+          бетоне и камне. <br>
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
+          шуруповерта и отбойного молотка.
+          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
+          ударная
+          дрель.
+        </p>
       </div>
-      <ul class="product-list list-reset">
-        <li>
-          <article class="product-card">
-            <img src="img/bosch-bfg6000.jpg" width="144" height="128"
-              alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
-            <h4>Перфоратор Bosch BFG 6000</h4>
-            <p>
-              <del class="old-price">30500 Р.</del>
-              <ins class="new-price">25500 Р.</ins>
-            </p>
-          </article>
-        </li>
-        <li>
-          <article class="product-card">
-            <img src="img/bosch-bfg6000.jpg" width="144" height="128"
-              alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
-            <h4>Перфоратор Bosch BFG 6000</h4>
-            <p>
-              <del class="old-price">30500 Р.</del>
-              <ins class="new-price">25500 Р.</ins>
-            </p>
-          </article>
-        </li>
-        <li class="new">
-          <article class="product-card">
-            <img src="img/bosch-bfg6000.jpg" width="144" height="128"
-              alt="Новинка. Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
-            <h4>Перфоратор Bosch BFG 6000</h4>
-            <p>
-              <del class="old-price">30500 Р.</del>
-              <ins class="new-price">25500 Р.</ins>
-            </p>
-          </article>
-        </li>
-        <li class="new">
-          <article class="product-card">
-            <img src="img/bosch-bfg3000.jpg" width="127" height="112"
-              alt="Новинка. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Дополнительная рукоятка выпирает. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
-            <h4>Перфоратор Bosch BFG 3000</h4>
-            <p>
-              <del class="old-price">22500 Р.</del>
-              <ins class="new-price">15500 Р.</ins>
-            </p>
-          </article>
-        </li>
-        <li>
-          <article class="product-card">
-            <img src="img/bosch-bfg6000.jpg" width="144" height="128"
-              alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
-            <h4>Перфоратор Bosch BFG 6000</h4>
-            <p>
-              <del class="old-price">30500 Р.</del>
-              <ins class="new-price">25500 Р.</ins>
-            </p>
-          </article>
-        </li>
-        <li class="new">
-          <article class="product-card">
-            <img src="img/bosch-bfg2000.jpg" width="127" height="112"
-              alt="Новинка. Внешне ничем не отличается от модели BFG3000.">
-            <h4>Перфоратор Bosch BFG 2000</h4>
-            <p>
-              <del class="old-price">22500 P.</del>
-              <ins class="new-price">12500 Р.</ins>
-            </p>
-          </article>
-        </li>
-        <li class="new">
-          <article class="product-card">
-            <img src="img/bosch-bfg3000.jpg" width="127" height="112"
-              alt="Новинка. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Дополнительная рукоятка выпирает. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
-            <h4>Перфоратор Bosch BFG 3000</h4>
-            <p>
-              <del class="old-price">22500 Р.</del>
-              <ins class="new-price">15500 Р.</ins>
-            </p>
-          </article>
-        </li>
-        <li>
-          <article class="product-card">
-            <img src="img/bosch-bfg6000.jpg" width="144" height="128"
-              alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
-            <h4>Перфоратор Bosch BFG 6000</h4>
-            <p>
-              <del class="old-price">30500 Р.</del>
-              <ins class="new-price">25500 Р.</ins>
-            </p>
-          </article>
-        </li>
-        <li class="new">
-          <article class="product-card">
-            <img src="img/bosch-bfg2000.jpg" width="127" height="112"
-              alt="Новинка. Внешне ничем не отличается от модели BFG3000.">
-            <h4>Перфоратор Bosch BFG 2000</h4>
-            <p>
-              <del class="old-price">22500 P.</del>
-              <ins class="new-price">12500 Р.</ins>
-            </p>
-          </article>
-        </li>
-      </ul>
-      <ul class="pagination list-reset">
-        <li>
-          <a href="">1</a>
-        </li>
-        <li>
-          <a href="">2</a>
-        </li>
-        <li>
-          <a href="">3</a>
-        </li>
-        <li>
-          <a href="">Следующая</a>
-        </li>
-      </ul>
-    </section>
-    <section class="useful-info-1 container">
-      <h2>Пара слов о перфораторах</h2>
-      <p>
-        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
-        кирпиче,
-        бетоне и камне. <br>
-        Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
-        шуруповерта и отбойного молотка.
-        В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
-        ударная
-        дрель.
-      </p>
     </section>
   </main>
   <footer>
