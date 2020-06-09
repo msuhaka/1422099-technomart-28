@@ -16,13 +16,13 @@
       <div class="container">
         <a class="logo-header" href="index.html"><img src="img/logo.svg" width="220" height="47"
             alt="Красный логотип магазина «Техномарт»."></a>
-        <form action="https://echo.htmlacademy.ru" method="get">
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <label for="search">
             <input type="search" name="search" id="search" placeholder="Поиск:">
           </label>
         </form>
-        <a class="bookmark" href="">Закладки: </a>
-        <a class="basket" href="">Корзина: </a>
+        <a class="bookmark-button" href="">Закладки:</a>
+        <a class="basket-button" href="">Корзина:</a>
         <a class="green-button" href="">Оформить заказ</a>
       </div>
     </div>
@@ -49,7 +49,7 @@
       </nav>
     </div>
   </header>
-  <main class="main">
+  <main class="main-page">
     <h1 class="visually-hidden">Промо Блок</h1>
     <ul class="category-list list-reset">
       <li class="category-material new">
@@ -226,8 +226,7 @@
         </li>
       </ul>
     </section>
-    <section class="useful-info-2">
-      <div class="container">
+    <section class="useful-info container">
         <div class="features">
           <h2>Компания «Техномарт»</h2>
           <p>
@@ -257,9 +256,9 @@
       </div>
     </section>
   </main>
-  <footer>
-    <div class="footer-top">
-      <div class="container">
+  <footer class="footer">
+    <div class="footer-top-wrapper">
+      <div class=" footer-top container">
         <div class="footer-top-left">
           <a class="logo-footer" href="index.html"><img src="img/logo-footer.svg" width="220" height="68"
               alt="Красный логотип магазина «Техномарт»."></a>
@@ -267,7 +266,7 @@
               555-05-55</a></p>
         </div>
         <div class="footer-navigation">
-          <ul class="main-site-sections list-reset">
+          <ul class="footer-nav-list list-reset">
             <li><a href="">Компания</a></li>
             <li><a href="">Новости</a></li>
             <li><a href="catalog.html">Каталог</a></li>
@@ -283,18 +282,16 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container">
+    <div class="footer-bottom-wrapper">
+      <div class="footer-bottom container">
         <p class="copyright">© 2010–2019 Компания «Техномарт»
           Все права защищены
         </p>
-        <div class="socials">
-          <ul class="social-button list-reset">
-            <li><a class="vk" href=""><span class="">вконтакте</span></a></li>
-            <li><a class="fb" href=""><span class="">фейсбук</span></a></li>
-            <li><a class="instagram" href=""><span class="">инстаграм</span></a></li>
-          </ul>
-        </div>
+        <ul class="social-list list-reset">
+          <li><a class="social-button" href=""><span class="">вконтакте</span></a></li>
+          <li><a class="social-button" href=""><span class="">фейсбук</span></a></li>
+          <li><a class="social-button" href=""><span class="">инстаграм</span></a></li>
+        </ul>
         <p class="contact-mail">
           Обратная связь:
           <a class="contact-us" href="mailto:mail@htmlacademy.ru">
