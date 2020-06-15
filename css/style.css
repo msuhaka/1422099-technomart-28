@@ -774,10 +774,13 @@ img {
 .catalog-top-wrapper .breadcrumbs {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 20px;
 }
 
 .breadcrumbs li {
   padding: 0;
+  margin-right: 40px;
   font-size: 13px;
   line-height: 18px;
   font-family: 'PT Sans', 'Tahoma', sans-serif;
@@ -846,15 +849,35 @@ img {
 
 /*Полоска сортировки*/
 
+.sort h5 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+}
+
+.catalog .sort {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
 
 .sort .sort-list {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
+
 
 .sort a {
   color: var(--basic-black);
   opacity: 0.3;
+}
+
+.sort .up-down {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 17px;
 }
 
 .sort a:hover {
@@ -876,6 +899,7 @@ img {
   text-decoration: underline;
   text-decoration-color: var(--basic-red);
   text-decoration-style: dotted;
+  margin: 0 30px;
 }
 
 .catalog-filter .filter-form {
@@ -914,6 +938,9 @@ img {
   line-height: 18px;
   font-family: 'PT Sans', 'Tahoma', sans-serif;
   text-transform: uppercase;
+  width: 100%;
+  padding: 10px 0;
+  border: 1px solid var(--basic-greylight);
 }
 
 /*Карточки с товаром*/
