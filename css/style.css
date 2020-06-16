@@ -1008,21 +1008,21 @@ img {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 17px;
+
 }
 
-.sort a:hover {
+.sort .sort-item:hover {
   color: var(--basic-black);
   opacity: 1;
 }
 
-.sort-list a:hover {
+.sort-list .sort-item:hover {
   text-decoration: underline;
   text-decoration-color: var(--basic-red);
   text-decoration-style: solid;
 }
 
-.sort-item a {
+.sort-list .sort-item {
   font-size: 13px;
   line-height: 18px;
   font-family: 'PT Sans', 'Tahoma', sans-serif;
@@ -1030,7 +1030,7 @@ img {
   text-decoration: underline;
   text-decoration-color: var(--basic-red);
   text-decoration-style: dotted;
-  margin: 0 30px;
+  margin-left: 15px;
 }
 
 /*Карточки с товаром*/
@@ -1231,6 +1231,8 @@ img {
   margin-left: auto;
   margin-right: auto;
   background-color: var(--basic-white);
+  display: flex;
+  justify-content: center;
 }
 
 .page-body .bottom-popup {
@@ -1239,7 +1241,8 @@ img {
 }
 
 .modal-buying-notice h3 {
-  padding: 66px 99px;
+  position: relative;
+  padding: 66px 0;
   margin: 0;
   text-align: center;
   font-size: 24px;
