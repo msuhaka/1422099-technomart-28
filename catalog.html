@@ -23,7 +23,7 @@
         </form>
         <a class="bookmark-button" href="">Закладки:</a>
         <a class="basket-button" href="">Корзина:</a>
-        <a class="green-button" href="">Оформить заказ</a>
+        <a class="order-button" href="">Оформить заказ</a>
       </div>
     </div>
     <div class="container">
@@ -75,10 +75,26 @@
       <section class="catalog-filter">
         <h5>Фильтр:</h5>
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset>
+          <fieldset class="filter-item price">
             <legend>Цена:</legend>
-            <label for="price"></label>
-            <!--будущая форма с двумя ползунками-->
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style=" width: 70%; margin-left: 5%"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="left: 5%"></div>
+                <div class="toggle toggle-max" tabindex="0" style="left: 70%"></div>
+              </div>
+              <div class="price-controls">
+                <label for="min-price">
+                  <input type="number" name="max-price" min="0" max="29500" value="0" step="500">
+                </label>
+                <label for="max-price">
+                  <input type="number" name="max-price" min="500" max="30000" value="30000" step="500">
+                </label>
+              </div>
+            </div>
+            <div class=""></div>
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
@@ -135,10 +151,10 @@
               <a href="">По функционалу</a>
             </li>
             <li class="up-down">
-              <a href="">up</a>
+              <a href="">Сортировка по возрастанию</a>
             </li>
             <li class="up-down">
-              <a href="">down</a>
+              <a href="">Сортировка по убыванию</a>
             </li>
           </ul>
         </div>
@@ -147,7 +163,7 @@
             <article class="product-card">
               <img src="img/bosch-bfg6000.jpg" width="144" height="128"
                 alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
-              <h4>Перфоратор <span class="uppercase">bosch bfg 6000</span></h4>
+              <h4>Перфоратор BOSCH BFG 6000</h4>
               <del class="old-price">30500 Р.</del>
               <ins class="new-price">25500 Р.</ins>
             </article>
@@ -156,7 +172,7 @@
             <article class="product-card">
               <img src="img/bosch-bfg6000.jpg" width="144" height="128"
                 alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
-              <h4>Перфоратор <span class="uppercase">bosch bfg 6000</span></h4>
+              <h4>Перфоратор BOSCH BFG 6000</h4>
               <del class="old-price">30500 Р.</del>
               <ins class="new-price">25500 Р.</ins>
             </article>
@@ -165,7 +181,7 @@
             <article class="product-card">
               <img src="img/bosch-bfg6000.jpg" width="144" height="128"
                 alt="Новинка. Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
-              <h4>Перфоратор <span class="uppercase">bosch bfg 6000</span></h4>
+              <h4>Перфоратор BOSCH BFG 6000</h4>
               <del class="old-price">30500 Р.</del>
               <ins class="new-price">25500 Р.</ins>
             </article>
@@ -174,7 +190,7 @@
             <article class="product-card">
               <img src="img/bosch-bfg3000.jpg" width="127" height="112"
                 alt="Новинка. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Дополнительная рукоятка выпирает. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
-              <h4>Перфоратор <span class="uppercase">bosch bfg 3000</span></h4>
+              <h4>Перфоратор BOSCH BFG 3000</h4>
               <del class="old-price">22500 Р.</del>
               <ins class="new-price">15500 Р.</ins>
             </article>
@@ -183,7 +199,7 @@
             <article class="product-card">
               <img src="img/bosch-bfg6000.jpg" width="144" height="128"
                 alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
-              <h4>Перфоратор <span class="uppercase">bosch bfg 6000</span></h4>
+              <h4>Перфоратор BOSCH BFG 6000</h4>
               <del class="old-price">30500 Р.</del>
               <ins class="new-price">25500 Р.</ins>
             </article>
@@ -192,7 +208,7 @@
             <article class="product-card">
               <img src="img/bosch-bfg2000.jpg" width="127" height="112"
                 alt="Новинка. Внешне ничем не отличается от модели BFG3000.">
-              <h4>Перфоратор <span class="uppercase">bosch bfg 2000</span></h4>
+              <h4>Перфоратор BOSCH BFG 2000</h4>
               <del class="old-price">22500 P.</del>
               <ins class="new-price">12500 Р.</ins>
             </article>
@@ -201,7 +217,7 @@
             <article class="product-card">
               <img src="img/bosch-bfg3000.jpg" width="127" height="112"
                 alt="Новинка. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Дополнительная рукоятка выпирает. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
-              <h4>Перфоратор <span class="uppercase">bosch bfg 3000</span></h4>
+              <h4>Перфоратор BOSCH BFG 3000</h4>
               <del class="old-price">22500 Р.</del>
               <ins class="new-price">15500 Р.</ins>
             </article>
@@ -210,7 +226,7 @@
             <article class="product-card">
               <img src="img/bosch-bfg6000.jpg" width="144" height="128"
                 alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
-              <h4>Перфоратор <span class="uppercase">bosch bfg 6000</span></h4>
+              <h4>Перфоратор BOSCH BFG 6000</h4>
               <del class="old-price">30500 Р.</del>
               <ins class="new-price">25500 Р.</ins>
             </article>
@@ -219,7 +235,7 @@
             <article class="product-card">
               <img src="img/bosch-bfg2000.jpg" width="127" height="112"
                 alt="Новинка. Внешне ничем не отличается от модели BFG3000.">
-              <h4>Перфоратор <span class="uppercase">bosch BFG 2000</span></h4>
+              <h4>Перфоратор BOSCH BFG 2000</h4>
               <del class="old-price">22500 P.</del>
               <ins class="new-price">12500 Р.</ins>
             </article>
@@ -314,7 +330,7 @@
       <h3>Товар добавлен в корзину!</h3>
     </div>
     <div class="bottom-popup">
-      <a class="button" href="">Оформить заказ</a>
+      <a class="order-bottom" href="">Оформить заказ</a>
       <a class="white-button" href="">Продолжить покупки</a>
     </div>
   </section>
