@@ -10,19 +10,21 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="page-body">
+<body class="page-body index-page">
   <header class="header">
     <div class="header-top">
       <div class="container">
         <a class="logo-header" href="index.html"><img src="img/logo.svg" width="220" height="47"
             alt="Красный логотип магазина «Техномарт»."></a>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-          <label for="search">
-            <input type="search" name="search" id="search" placeholder="Поиск:">
-          </label>
+          <a class="search">
+            <label for="search">
+              <input type="search" name="search" id="search" placeholder="Поиск:">
+            </label>
+          </a>
         </form>
-        <a class="bookmark-button" href="">Закладки:</a>
-        <a class="basket-button" href="">Корзина:</a>
+        <a class="bookmark-button" href="">Закладки: 0</a>
+        <a class="basket-button" href="">Корзина: 0</a>
         <a class="order-button" href="">Оформить заказ</a>
       </div>
     </div>
@@ -64,19 +66,23 @@
         <h3>Техника</h3>
         <a class="promo-button" href="">Для стройки</a>
       </li>
-      <li class="slider-item">
-        <ul class="slider-box list-reset">
-          <li class="active">
+      <li class="slider-box">
+        <ul class="slider-list list-reset">
+          <li class="slider-item active">
             <h1>Перфораторы</h1>
             <p>Настоящие мужские игрушки</p>
             <a class="button" href="catalog.html">Открыть каталог</a>
           </li>
-          <li>
+          <li class="slider-item">
             <h1>Дрели</h1>
             <p>Соседям на радость!</p>
             <a class="button" href="catalog.html">Открыть каталог</a>
           </li>
         </ul>
+        <div class="slider-controls">
+          <button class="button-previous" type="button" aria-label="Первый слайд"></button>
+          <button class="button-next" type="button" aria-label="Второй слайд"></button>
+        </div>
       </li>
       <li class="category-discount">
         <h3>Скидки 50%</h3>
@@ -93,7 +99,11 @@
         <a class="button" href="">Все популярные товары</a>
       </div>
       <ul class="product-list list-reset">
-        <li>
+        <li tabindex="0">
+          <div class="card-button" tabindex="0">
+            <a class="button-buying" href="">Купить</a>
+            <a class="button-to-bookmark" href="">В закладки</a>
+          </div>
           <article class="product-card">
             <img src="img/bosch-bfg9000.jpg" width="184" height="164"
               alt="Мощный перфоратор. Основной цвет корпуса темно-синий с серебристой накладкой сверху, логотип традиционно красный. Дополнительная рукоятка тонкая. Инструмент работает от сети.">
@@ -102,7 +112,11 @@
             <ins class="new-price">25500 Р.</ins>
           </article>
         </li>
-        <li class="new">
+        <li class="new" tabindex="0">
+          <div class="card-button" tabindex="0">
+            <a class="button-buying" href="">Купить</a>
+            <a class="button-to-bookmark" href="">В закладки</a>
+          </div>
           <article class="product-card">
             <img src="img/bosch-bfg3000.jpg" width="127" height="112"
               alt="Новинка. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Дополнительная рукоятка выпирает. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
@@ -111,7 +125,11 @@
             <ins class="new-price">15500 Р.</ins>
           </article>
         </li>
-        <li>
+        <li tabindex="0">
+          <div class="card-button" tabindex="0">
+            <a class="button-buying" href="">Купить</a>
+            <a class="button-to-bookmark" href="">В закладки</a>
+          </div>
           <article class="product-card">
             <img src="img/bosch-bfg6000.jpg" width="144" height="128"
               alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
@@ -120,7 +138,11 @@
             <ins class="new-price">25500 Р.</ins>
           </article>
         </li>
-        <li class="new">
+        <li class="new" tabindex="0">
+          <div class="card-button" tabindex="0">
+            <a class="button-buying" href="">Купить</a>
+            <a class="button-to-bookmark" href="">В закладки</a>
+          </div>
           <article class="product-card">
             <img src="img/bosch-bfg3000.jpg" width="127" height="112"
               alt="Новинка. Внешне ничем не отличается от модели BFG3000.">
@@ -168,7 +190,7 @@
         <li class="brand-item">
           <a href=""><img src="img/logo-metabo.png" width="204" height="69"
               alt="Популярный производитель Метабо. Работай. Не играйся. Логотип со слоганом."></a>
-          </li>
+        </li>
       </ul>
     </section>
     <section class="useful-info-1">
@@ -200,7 +222,7 @@
                 поднимая его на ваш этаж!
               </p>
             </li>
-            <li>
+            <li class="warranty">
               <h3>Гарантия</h3>
               <p>
                 Если купленный у нас товар поломается или заискрит,<br>
@@ -210,7 +232,7 @@
                 Дом уж восстановите как-нибудь сами.
               </p>
             </li>
-            <li class="active">
+            <li class="credit active">
               <h3>Кредит</h3>
               <p>
                 Залезть в долговую яму стало проще!<br>
@@ -285,9 +307,9 @@
           Все права защищены
         </p>
         <ul class="social-list list-reset">
-          <li><a class="social-button" href=""><span class="">вконтакте</span></a></li>
-          <li><a class="social-button" href=""><span class="">фейсбук</span></a></li>
-          <li><a class="social-button" href=""><span class="">инстаграм</span></a></li>
+          <li class="button-vk"><a class="social-button" href=""><span class="visually-hidden">вконтакте</span></a></li>
+          <li class="button-fb"><a class="social-button" href=""><span class="visually-hidden">фейсбук</span></a></li>
+          <li class="button-instagram"><a class="social-button" href=""><span class="visually-hidden">инстаграм</span></a></li>
         </ul>
         <p class="contact-mail">
           Обратная связь:
@@ -310,24 +332,24 @@
           заявки</span></button>
       <h2 class="visually-hidden">Форма оформления заявки</h2>
       <form class="form-in-modal container-modal" action="https://echo.htmlacademy.ru" method="post">
-        <div class="top-popup">
-          <p>
+        <div class="top-popup  container-modal">
+          <p class="input-name">
             <label for="order-name">Ваше имя:</label>
             <input type="text" id="order-name" name="name" placeholder="Имя Фамилия">
           </p>
-          <p>
+          <p class="input-mail">
             <label for="order-email">Ваш e-mail:</label>
             <input type="email" name="email" id="order-email" placeholder="email@example.com">
           </p>
+          <p class="input-textarea">
+            <label for="order-text">Текст письма:</label>
+            <textarea name="message" id="order-text" cols="30" rows="6" placeholder="В свободной форме"></textarea>
+          </p>
         </div>
-        <p>
-          <label for="order-text">Текст письма:</label>
-          <textarea name="message" id="order-text" cols="30" rows="6" placeholder="В свободной форме"></textarea>
-        </p>
+        <div class="bottom-popup">
+          <button class="button container-modal" type="submit">Отправить</button>
+        </div>
       </form>
-    </div>
-    <div class="bottom-popup">
-      <button class="button container-modal" type="submit">Отправить</button>
     </div>
   </section>
   <section class="popup">
