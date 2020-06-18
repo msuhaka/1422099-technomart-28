@@ -18,11 +18,11 @@
             alt="Красный логотип магазина «Техномарт»."></a>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <label for="search">
-            <input type="search" name="search" id="search" placeholder="Поиск:">
+            <input class="search" type="search" name="search" id="search" placeholder="Поиск:">
           </label>
         </form>
-        <a class="bookmark-button" href="">Закладки:</a>
-        <a class="basket-button" href="">Корзина:</a>
+        <a class="bookmark-button" href="">Закладки: 0 </a>
+        <a class="basket-button" href="">Корзина: 10</a>
         <a class="order-button" href="">Оформить заказ</a>
       </div>
     </div>
@@ -80,10 +80,12 @@
             <div class="range-filter">
               <div class="range-controls">
                 <div class="scale">
-                  <div class="bar" style=" width: 70%; margin-left: 5%"></div>
+                  <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0" style="left: 5%"></div>
-                <div class="toggle toggle-max" tabindex="0" style="left: 70%"></div>
+                <div class="toggle toggle-min" tabindex="0"
+                  aria-label="Ограничитель минимальной цены по ценовому диапазону"></div>
+                <div class="toggle toggle-max" tabindex="0"
+                  aria-label="Ограничитель максимальной цены по ценовому диапазону"></div>
               </div>
               <div class="price-controls">
                 <label for="min-price">
@@ -97,27 +99,27 @@
             <div class=""></div>
           </fieldset>
           <fieldset>
-            <legend>Производители:</legend>
+            <legend class="filter-item">Производители:</legend>
             <ul class="filter-items list-reset">
               <li>
-                <input type="checkbox" name="Bosch" id="filter-bosch" checked>
-                <label for="filter-bosch">Bosch</label>
+                <input class="check-input" type="checkbox" name="Bosch" id="filter-bosch" checked>
+                <label class="check" for="filter-bosch">Bosch</label>
               </li>
               <li>
-                <input type="checkbox" name="Interskol" id="filter-interskol">
-                <label for="filter-interskol">Интерскол</label>
+                <input class="check-input" type="checkbox" name="Interskol" id="filter-interskol">
+                <label class="check" for="filter-interskol">Интерскол</label>
               </li>
               <li>
-                <input type="checkbox" name="Makita" id="filter-makita" checked>
-                <label for="filter-makita">Makita</label>
+                <input class="check-input" type="checkbox" name="Makita" id="filter-makita" checked>
+                <label class="check" for="filter-makita">Makita</label>
               </li>
               <li>
-                <input type="checkbox" name="Dewalt" id="filter-dewalt">
-                <label for="filter-dewalt">Dewalt</label>
+                <input class="check-input" type="checkbox" name="Dewalt" id="filter-dewalt" disabled>
+                <label class="check" for="filter-dewalt">Dewalt</label>
               </li>
               <li>
-                <input type="checkbox" name="Hiachi" id="filter-hitachi">
-                <label for="filter-hitachi">Hitachi</label>
+                <input class="check-input" type="checkbox" name="Hiachi" id="filter-hitachi">
+                <label class="check" for="filter-hitachi">Hitachi</label>
               </li>
             </ul>
           </fieldset>
@@ -125,12 +127,14 @@
             <legend>Питание:</legend>
             <ul class="filter-items list-reset">
               <li>
-                <input type="radio" name="power-type" id="filter-battery" value="Аккумуляторные" checked>
-                <label for="filter-battery">Аккумуляторные</label>
+                <input class="radio-input" type="radio" name="power-type" id="filter-battery" value="Аккумуляторные"
+                  checked>
+                <label class="radio" for="filter-battery">Аккумуляторные</label>
               </li>
               <li>
-                <input type="radio" name="power-type" id="filter-line-operated" value="Сетевые">
-                <label for="filter-line-operated">Сетевые</label>
+                <input class="radio-input" type="radio" name="power-type" id="filter-electricity" value="Сетевые"
+                  disabled>
+                <label class="radio" for="filter-electricity">Сетевые</label>
               </li>
             </ul>
           </fieldset>
@@ -151,16 +155,20 @@
               <a class="sort-item" href="">По функционалу</a>
             </li>
             <li>
-              <a class="up-down" href="">Сортировка по возрастанию</a>
+              <a class="sort-up up-down" href=""><span class="visually-hidden">Сортировка по возрастанию</span></a>
             </li>
             <li>
-              <a class="up-down" href="">Сортировка по убыванию</a>
+              <a class="sort-down up-down" href=""><span class="visually-hidden">Сортировка по убыванию</span></a>
             </li>
           </ul>
         </div>
         <ul class="product-list list-reset">
           <li>
             <article class="product-card">
+              <div class="card-button" tabindex="0">
+                <a class="button-buying" href="">Купить</a>
+                <a class="button-to-bookmark" href="">В закладки</a>
+              </div>
               <img src="img/bosch-bfg6000.jpg" width="144" height="128"
                 alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
               <h4>Перфоратор BOSCH BFG 6000</h4>
@@ -169,6 +177,10 @@
             </article>
           </li>
           <li>
+            <div class="card-button" tabindex="0">
+              <a class="button-buying" href="">Купить</a>
+              <a class="button-to-bookmark" href="">В закладки</a>
+            </div>
             <article class="product-card">
               <img src="img/bosch-bfg6000.jpg" width="144" height="128"
                 alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
@@ -178,6 +190,10 @@
             </article>
           </li>
           <li class="new">
+            <div class="card-button" tabindex="0">
+              <a class="button-buying" href="">Купить</a>
+              <a class="button-to-bookmark" href="">В закладки</a>
+            </div>
             <article class="product-card">
               <img src="img/bosch-bfg6000.jpg" width="144" height="128"
                 alt="Новинка. Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
@@ -187,6 +203,10 @@
             </article>
           </li>
           <li class="new">
+            <div class="card-button" tabindex="0">
+              <a class="button-buying" href="">Купить</a>
+              <a class="button-to-bookmark" href="">В закладки</a>
+            </div>
             <article class="product-card">
               <img src="img/bosch-bfg3000.jpg" width="127" height="112"
                 alt="Новинка. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Дополнительная рукоятка выпирает. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
@@ -196,6 +216,10 @@
             </article>
           </li>
           <li>
+            <div class="card-button" tabindex="0">
+              <a class="button-buying" href="">Купить</a>
+              <a class="button-to-bookmark" href="">В закладки</a>
+            </div>
             <article class="product-card">
               <img src="img/bosch-bfg6000.jpg" width="144" height="128"
                 alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
@@ -205,6 +229,10 @@
             </article>
           </li>
           <li class="new">
+            <div class="card-button" tabindex="0">
+              <a class="button-buying" href="">Купить</a>
+              <a class="button-to-bookmark" href="">В закладки</a>
+            </div>
             <article class="product-card">
               <img src="img/bosch-bfg2000.jpg" width="127" height="112"
                 alt="Новинка. Внешне ничем не отличается от модели BFG3000.">
@@ -214,6 +242,10 @@
             </article>
           </li>
           <li class="new">
+            <div class="card-button" tabindex="0">
+              <a class="button-buying" href="">Купить</a>
+              <a class="button-to-bookmark" href="">В закладки</a>
+            </div>
             <article class="product-card">
               <img src="img/bosch-bfg3000.jpg" width="127" height="112"
                 alt="Новинка. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Дополнительная рукоятка выпирает. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
@@ -223,6 +255,10 @@
             </article>
           </li>
           <li>
+            <div class="card-button" tabindex="0">
+              <a class="button-buying" href="">Купить</a>
+              <a class="button-to-bookmark" href="">В закладки</a>
+            </div>
             <article class="product-card">
               <img src="img/bosch-bfg6000.jpg" width="144" height="128"
                 alt="Перфоратор средней мощности. Основной цвет корпуса перфоратора темно-синий, логотип традиционно красный. Имеется дополнительное крепление для второго сверла. Инструмент работает от аккумуляторов.">
@@ -232,6 +268,10 @@
             </article>
           </li>
           <li class="new">
+            <div class="card-button" tabindex="0">
+              <a class="button-buying" href="">Купить</a>
+              <a class="button-to-bookmark" href="">В закладки</a>
+            </div>
             <article class="product-card">
               <img src="img/bosch-bfg2000.jpg" width="127" height="112"
                 alt="Новинка. Внешне ничем не отличается от модели BFG3000.">
@@ -252,7 +292,7 @@
             <a href="">3</a>
           </li>
           <li>
-            <a href="">Следующая</a>
+            <a class="next-button" href="">Следующая</a>
           </li>
         </ul>
       </section>
@@ -305,9 +345,9 @@
           Все права защищены
         </p>
         <ul class="social-list list-reset">
-          <li><a class="social-button" href=""><span class="">вконтакте</span></a></li>
-          <li><a class="social-button" href=""><span class="">фейсбук</span></a></li>
-          <li><a class="social-button" href=""><span class="">инстаграм</span></a></li>
+          <li class="button-vk"><a class="social-button" href=""><span class="visually-hidden">вконтакте</span></a></li>
+          <li class="button-fb"><a class="social-button" href=""><span class="visually-hidden">фейсбук</span></a></li>
+          <li class="button-instagram"><a class="social-button" href=""><span class="visually-hidden">инстаграм</span></a></li>
         </ul>
         <p class="contact-mail">
           Обратная связь:
