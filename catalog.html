@@ -82,10 +82,8 @@
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0"
-                  aria-label="Ограничитель минимальной цены по ценовому диапазону"></div>
-                <div class="toggle toggle-max" tabindex="0"
-                  aria-label="Ограничитель максимальной цены по ценовому диапазону"></div>
+                <button class="toggle toggle-min" aria-label="Ограничитель минимальной цены по ценовому диапазону"></button>
+                <button class="toggle toggle-max" aria-label="Ограничитель максимальной цены по ценовому диапазону"></button>
               </div>
               <div class="price-controls">
                 <label for="min-price">
@@ -100,41 +98,41 @@
           </fieldset>
           <fieldset>
             <legend class="filter-item">Производители:</legend>
-            <ul class="filter-items list-reset">
+            <ul class="filter-list list-reset">
               <li>
-                <input class="check-input" type="checkbox" name="Bosch" id="filter-bosch" checked>
-                <label class="check" for="filter-bosch">Bosch</label>
+                <input class="checkbox-item" type="checkbox" name="Bosch" id="filter-bosch" checked>
+                <label class="checkbox-title" for="filter-bosch">Bosch</label>
               </li>
               <li>
-                <input class="check-input" type="checkbox" name="Interskol" id="filter-interskol">
-                <label class="check" for="filter-interskol">Интерскол</label>
+                <input class="checkbox-item" type="checkbox" name="Interskol" id="filter-interskol">
+                <label class="checkbox-title" for="filter-interskol">Интерскол</label>
               </li>
               <li>
-                <input class="check-input" type="checkbox" name="Makita" id="filter-makita" checked>
-                <label class="check" for="filter-makita">Makita</label>
+                <input class="checkbox-item" type="checkbox" name="Makita" id="filter-makita" checked>
+                <label class="checkbox-title" for="filter-makita">Makita</label>
               </li>
               <li>
-                <input class="check-input" type="checkbox" name="Dewalt" id="filter-dewalt" disabled>
-                <label class="check" for="filter-dewalt">Dewalt</label>
+                <input class="checkbox-item" type="checkbox" name="Dewalt" id="filter-dewalt" disabled>
+                <label class="checkbox-title" for="filter-dewalt">Dewalt</label>
               </li>
               <li>
-                <input class="check-input" type="checkbox" name="Hiachi" id="filter-hitachi">
-                <label class="check" for="filter-hitachi">Hitachi</label>
+                <input class="checkbox-item" type="checkbox" name="Hiachi" id="filter-hitachi">
+                <label class="checkbox-title" for="filter-hitachi">Hitachi</label>
               </li>
             </ul>
           </fieldset>
           <fieldset>
             <legend>Питание:</legend>
-            <ul class="filter-items list-reset">
+            <ul class="filter-list list-reset">
               <li>
-                <input class="radio-input" type="radio" name="power-type" id="filter-battery" value="Аккумуляторные"
+                <input class="radio-input-item" type="radio" name="power-type" id="filter-battery" value="Аккумуляторные"
                   checked>
-                <label class="radio" for="filter-battery">Аккумуляторные</label>
+                <label class="radio-input-title" for="filter-battery">Аккумуляторные</label>
               </li>
               <li>
-                <input class="radio-input" type="radio" name="power-type" id="filter-electricity" value="Сетевые"
+                <input class="radio-input-item" type="radio" name="power-type" id="filter-electricity" value="Сетевые"
                   disabled>
-                <label class="radio" for="filter-electricity">Сетевые</label>
+                <label class="radio-input-title" for="filter-electricity">Сетевые</label>
               </li>
             </ul>
           </fieldset>
@@ -165,7 +163,7 @@
         <ul class="product-list list-reset">
           <li>
             <article class="product-card">
-              <div class="card-button" tabindex="0">
+              <div class="card-buttons" tabindex="0">
                 <a class="button-buying" href="">Купить</a>
                 <a class="button-to-bookmark" href="">В закладки</a>
               </div>
@@ -177,7 +175,7 @@
             </article>
           </li>
           <li>
-            <div class="card-button" tabindex="0">
+            <div class="card-buttons" tabindex="0">
               <a class="button-buying" href="">Купить</a>
               <a class="button-to-bookmark" href="">В закладки</a>
             </div>
@@ -190,7 +188,7 @@
             </article>
           </li>
           <li class="new">
-            <div class="card-button" tabindex="0">
+            <div class="card-buttons" tabindex="0">
               <a class="button-buying" href="">Купить</a>
               <a class="button-to-bookmark" href="">В закладки</a>
             </div>
@@ -203,7 +201,7 @@
             </article>
           </li>
           <li class="new">
-            <div class="card-button" tabindex="0">
+            <div class="card-buttons" tabindex="0">
               <a class="button-buying" href="">Купить</a>
               <a class="button-to-bookmark" href="">В закладки</a>
             </div>
@@ -216,7 +214,7 @@
             </article>
           </li>
           <li>
-            <div class="card-button" tabindex="0">
+            <div class="card-buttons" tabindex="0">
               <a class="button-buying" href="">Купить</a>
               <a class="button-to-bookmark" href="">В закладки</a>
             </div>
@@ -229,7 +227,7 @@
             </article>
           </li>
           <li class="new">
-            <div class="card-button" tabindex="0">
+            <div class="card-buttons" tabindex="0">
               <a class="button-buying" href="">Купить</a>
               <a class="button-to-bookmark" href="">В закладки</a>
             </div>
@@ -242,7 +240,7 @@
             </article>
           </li>
           <li class="new">
-            <div class="card-button" tabindex="0">
+            <div class="card-buttons" tabindex="0">
               <a class="button-buying" href="">Купить</a>
               <a class="button-to-bookmark" href="">В закладки</a>
             </div>
@@ -255,7 +253,7 @@
             </article>
           </li>
           <li>
-            <div class="card-button" tabindex="0">
+            <div class="card-buttons" tabindex="0">
               <a class="button-buying" href="">Купить</a>
               <a class="button-to-bookmark" href="">В закладки</a>
             </div>
@@ -268,7 +266,7 @@
             </article>
           </li>
           <li class="new">
-            <div class="card-button" tabindex="0">
+            <div class="card-buttons" tabindex="0">
               <a class="button-buying" href="">Купить</a>
               <a class="button-to-bookmark" href="">В закладки</a>
             </div>
@@ -345,9 +343,9 @@
           Все права защищены
         </p>
         <ul class="social-list list-reset">
-          <li class="button-vk"><a class="social-button" href=""><span class="visually-hidden">вконтакте</span></a></li>
-          <li class="button-fb"><a class="social-button" href=""><span class="visually-hidden">фейсбук</span></a></li>
-          <li class="button-instagram"><a class="social-button" href=""><span class="visually-hidden">инстаграм</span></a></li>
+          <li class="social-item" tabindex="0"><a class="button-vk" href=""><span class="visually-hidden">вконтакте</span></a></li>
+          <li class="social-item" tabindex="0"><a class="button-fb" href=""><span class="visually-hidden">фейсбук</span></a></li>
+          <li class="social-item" tabindex="0"><a class="button-instagram" href=""><span class="visually-hidden">инстаграм</span></a></li>
         </ul>
         <p class="contact-mail">
           Обратная связь:
