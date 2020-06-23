@@ -175,7 +175,7 @@ img {
   flex-grow: 1;
 }
 
-input[type=search]::placeholder {
+.header-top input[type=search]::placeholder {
   color: var(--basic-white);
   padding-top: 12px;
   padding-bottom: 10px;
@@ -230,7 +230,8 @@ input[type=search]::placeholder {
   height: 16px;
   background-image: url('../img/icon-bookmark.svg');
   background-repeat: no-repeat;
-  top: 13px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 13px;
   opacity: 0.4;
 }
@@ -266,7 +267,8 @@ input[type=search]::placeholder {
   background-image: url('../img/icon-cart.svg');
   background-repeat: no-repeat;
   position: absolute;
-  top: 13px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 13px;
   opacity: 0.4;
 }
@@ -318,6 +320,7 @@ input[type=search]::placeholder {
 }
 
 .call-us .tel {
+  position: relative;
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
@@ -325,6 +328,18 @@ input[type=search]::placeholder {
   border: 3px solid var(--basic-white);
   padding: 7px 45px 8px 74px;
   margin: 0 auto;
+}
+
+.call-us .tel::before {
+  content: "";
+  width: 18px;
+  height: 20px;
+  background-image: url(../img/icon-phone.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15%;
 }
 
 .call-us p {
@@ -379,12 +394,14 @@ input[type=search]::placeholder {
   height: 17px;
   background-image: url('../img/icon-login.svg');
   position: absolute;
-  top: 13px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 18px;
 }
 
 .log-in:hover::before {
-  background-image: url('../img/icon-login-blue.svg');
+  background-image: url('../img/icon-login.svg');
+  fill: var(--basic-darkblue);
 }
 
 .log-in:active::before {
@@ -402,7 +419,8 @@ input[type=search]::placeholder {
   height: 18px;
   background-image: url('../img/icon-user.svg');
   position: absolute;
-  top: 13px;
+  top: 25%;
+  transform: translateY(-50%);
   left: 15px;
   
 }
@@ -457,19 +475,19 @@ input[type=search]::placeholder {
   position: relative;
 }
 
-.header-middle .profile-navigation::before  {
+.header-middle .profile-navigation::after  {
   content: "";
   width: 4px;
   height: 4px;
   background-color: var(--special-darkblue);
   border-radius: 2px;
   position: absolute;
-  bottom: 10px;
-  right: 127px;
+  bottom: 50%;
+  right: 50%;
   cursor: pointer;
 }
 
-.profile-navigation:hover::before {
+.profile-navigation:hover::after {
   background-color: var(--basic-red);
 }
 .profile-navigation:active::before {
@@ -478,6 +496,8 @@ input[type=search]::placeholder {
 
 .user-profile .profile-navigation {
   align-self: center;
+  display: flex;
+  justify-content: center;
   margin: 7px auto;
   position: relative;
 }
@@ -1008,7 +1028,7 @@ input[type=search]::placeholder {
   background-repeat: no-repeat;
   position: absolute;
   top: -12px;
-  right: 0px;
+  right: 0;
   z-index: 1;
 }
 
@@ -1332,14 +1352,14 @@ input[type=search]::placeholder {
 
 /*-------------checkbox--------------*/
 
-.radio,
-.check {
+.radio-input-title,
+.checkbox-title {
   position: relative;
   padding-left: 30px;
 }
 
-.radio-input,
-.check-input {
+.radio-input-item,
+.checkbox-item {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1350,11 +1370,11 @@ input[type=search]::placeholder {
   overflow: hidden;
 }
 
-.check-input:disabled+.check {
+.checkbox-item:disabled+.checkbox-title {
   opacity: 0.4;
 }
 
-.check::before {
+.checkbox-title::before {
   content: "";
   width: 27px;
   height: 23px;
@@ -1366,30 +1386,30 @@ input[type=search]::placeholder {
   top: -2px;
 }
 
-.check-input:checked+.check::before {
+.checkbox-item:checked+.checkbox-title::before {
   background-image: url('../img/checkbox-on.svg');
 }
 
-.check-input:hover+.check::before {
+.checkbox-item:hover+.checkbox-title::before {
   opacity: 1;
   cursor: pointer;
 }
 
-.check-input:focus+.check::before {
+.checkbox-item:focus+.checkbox-title::before {
   opacity: 1;
   width: 23px;
   box-shadow: 0 0 0 1px var(--basic-black);
   cursor: pointer;
 }
 
-.check-input:disabled+.check::before {
+.checkbox-item:disabled+.checkbox-title::before {
   opacity: 1;
   cursor: not-allowed;
 }
 
 /*-----------radio check----------------*/
 
-.radio::before {
+.radio-input-title::before {
   content: "";
   width: 25px;
   height: 25px;
@@ -1401,27 +1421,27 @@ input[type=search]::placeholder {
   top: -2px;
 }
 
-.radio-input:disabled+.radio {
+.radio-input-item:disabled+.radio-input-title {
   opacity: 0.4;
 }
 
-.radio-input:checked+.radio::before {
+.radio-input-item:checked+.radio-input-title::before {
   background-image: url('../img/radio-on.svg');
 }
 
-.radio-input:hover+.radio::before {
+.radio-input-item:hover+.radio-input-title::before {
   opacity: 1;
   cursor: pointer;
 }
 
-.radio-input:focus+.radio::before {
+.radio-input-item:focus+.radio-input-title::before {
   opacity: 1;
   box-shadow: 0 0 0 1px var(--basic-black);
   border-radius: 50%;
   cursor: pointer;
 }
 
-.radio-input:disabled+.radio::before {
+.radio-input-item:disabled+.radio-input-title::before {
   opacity: 1;
   cursor: not-allowed;
 }
@@ -1605,7 +1625,7 @@ input[type=search]::placeholder {
   z-index: 2;
 }
 
-.product-list .card-button {
+.product-list .card-buttons {
   display: none;
   position: absolute;
   background-color: var(--basic-white);
@@ -1618,18 +1638,18 @@ input[type=search]::placeholder {
   z-index: 1;
 }
 
-.product-list li:hover .card-button {
+.product-list li:hover .card-buttons {
 display: flex;
   z-index: 3;
 }
 
-.product-list li:focus .card-button {
+.product-list li:focus .card-buttons {
   display: flex;
     z-index: 3;
   }
 
 
-.card-button .button-buying {
+.card-buttons .button-buying {
   position: relative;
   font-size: 14px;
   line-height: 18px; 
@@ -1647,7 +1667,7 @@ display: flex;
   padding-left: 25px;
 }
 
-.card-button .button-buying::before {
+.card-buttons .button-buying::before {
   position: absolute;
   top: 10px;
   left: 30px;
@@ -1658,15 +1678,15 @@ display: flex;
   opacity: 0.3;
 }
 
-.card-button .button-buying:hover {
+.card-buttons .button-buying:hover {
   background-color: var(--special-green);
 }
 
-.card-button .button-buying:active {
+.card-buttons .button-buying:active {
   background-color: var(--special-dark-green);
 }
 
-.card-button .button-to-bookmark {
+.card-buttons .button-to-bookmark {
   font-size: 14px;
   line-height: 18px; 
   text-transform: uppercase;
@@ -1681,11 +1701,11 @@ display: flex;
   margin-top: 10px;
 }
 
-.card-button .button-to-bookmark:hover {
+.card-buttons .button-to-bookmark:hover {
   border: 3px solid var(--special-darkblue);
 }
 
-.card-button .button-to-bookmark:active {
+.card-buttons .button-to-bookmark:active {
   border: 3px solid var(--special-darkblue);
   opacity: 0.5;
 }
@@ -2073,19 +2093,19 @@ display: flex;
   position: relative;
 }
 
-.button-vk .social-button::after {
+.social-item .button-vk::after {
   content: "";
   width: 25px;
   height: 14px;
   background-image: url('../img/icon-vk.svg');
   background-repeat: no-repeat;
   position: absolute;
-  top: 16px;
+  top: 15px;
   left: 9px;
 }
 
 
-.button-fb .social-button::after {
+.social-item .button-fb::after {
   content: "";
   width: 12px;
   height: 22px;
@@ -2093,10 +2113,10 @@ display: flex;
   background-repeat: no-repeat;
   position: absolute;
   top: 11px;
-  left: 15px;
+  left: 16px;
 }
 
-.button-instagram .social-button::after {
+.social-item .button-instagram::after {
   content: "";
   width: 25px;
   height: 25px;
@@ -2107,22 +2127,19 @@ display: flex;
   left: 12px;
 }
 
-.social-list .social-button {
-  content: "";
+.social-list .social-item {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: var(--social-button-darkblue);
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
 }
 
-.social-list .social-button:hover {
+.social-list .social-item:hover,
+.social-list .social-item:focus {
   background-color: var(--basic-red);
 }
 
-.social-list .social-button:active {
+.social-list .social-item:active {
   background-color: var(--basic-red);
 }
 
