@@ -1612,12 +1612,12 @@ img {
   z-index: 1;
 }
 
-.product-list li:hover .card-buttons {
+.product-item:hover .card-buttons {
   display: flex;
   z-index: 3;
 }
 
-.product-list li:focus .card-buttons {
+.product-item:focus .card-buttons {
   display: flex;
   z-index: 3;
 }
@@ -1688,7 +1688,6 @@ img {
   box-shadow: 0 0 10px var(--box-shadow);
 }
 
-
 .product-card img {
   margin: auto;
 }
@@ -1725,7 +1724,7 @@ img {
   text-align: center;
   margin: 17px auto;
   margin-bottom: 32px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .product-list .product-card::after {
