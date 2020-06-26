@@ -331,7 +331,7 @@ img {
   font-size: 14px;
   color: var(--special-darkblue);
   text-align: center;
-  margin-top: 14px;
+  margin-top: 10px;
 
 }
 
@@ -437,6 +437,7 @@ img {
   justify-content: center;
   margin: 0px auto;
   position: relative;
+  margin-bottom: 10px;
 }
 
 .user-profile a:hover,
@@ -1083,7 +1084,8 @@ img {
   height: 2px;
   background-color: var(--basic-red);
   position: absolute;
-  top: 13px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
 }
 
@@ -1099,7 +1101,7 @@ img {
 .features li {
   font-size: 18px;
   color: var(--basic-black);
-  padding-bottom: 12px;
+  margin-bottom: 12px;
   padding-left: 37px;
 }
 
@@ -1757,9 +1759,14 @@ img {
 
 .page-body .popup {
   box-shadow: 0 0 10px var(--box-shadow);
-  background-color: var(--basic-red);
-  margin: 20px auto;
-  position: relative;
+  border-top:7px solid  var(--basic-red);
+  background-color: var(--basic-white);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  z-index: 10;
 }
 
 .popup .closing-button {
@@ -1772,20 +1779,28 @@ img {
   top: 14px;
   right: 11px;
   border: none;
+  z-index: 1;
   background-color: transparent;
 }
 
 /*-------------------- popup in index -------------------------*/
+
+.modal-write-us {
+  display: none ;
+}
+
 
 .modal-write-us .container-modal {
   width: 460px;
   margin: 0 auto;
 }
 
+
 .form-in-modal .top-popup {
   display: flex;
   flex-wrap: wrap;
-  margin: 37px auto;
+  padding-top: 35px;
+
 }
 
 .top-popup p {
@@ -1806,7 +1821,6 @@ img {
 }
 
 .modal-write-us .form-in-modal {
-
   width: 100%;
 }
 
@@ -1814,7 +1828,7 @@ img {
   position: relative;
   background-color: var(--basic-white);
   width: 621px;
-  border-top: 7px solid var(--basic-red)
+  
 }
 
 .modal-write-us p {
@@ -1834,7 +1848,6 @@ img {
 }
 
 .bottom-popup button {
-
   padding: 10px;
   font-size: 14px;
   line-height: 18px;
@@ -1844,25 +1857,19 @@ img {
   border: none;
 }
 
-.popup .map-popup {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: 7px;
+.map-popup {
+  display: none;
 }
 
+.map-popup iframe {
+  border: none;
+}
 
 /*---------------------- popup in catalog-------------------------*/
 
 .catalog-page .modal-buying-notice {
-  position: relative;
-  border-top: 7px solid var(--basic-red);
   width: 620px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: var(--basic-white);
-  display: flex;
-  justify-content: center;
+  display: none;
 }
 
 .catalog-page .bottom-popup {
@@ -1878,10 +1885,9 @@ img {
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
-  background-color: var(--basic-white);
 }
 
-.modal-buying-notice::before {
+.modal-buying-notice h3::before {
   content: '';
   width: 66px;
   height: 66px;
@@ -1917,14 +1923,14 @@ img {
 .bottom-popup .order-bottom {
   color: var(--basic-white);
   background-color: var(--basic-red);
-  margin-right: 34px;
-  margin-left: 114px;
+  margin-right: 10px;
 }
 
 .popup .white-button {
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
+
 
 
 
@@ -2027,38 +2033,30 @@ img {
 .footer-bottom .social-list {
   margin-right: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   position: relative;
 }
 
 .social-list li {
   width: 44px;
-  margin-right: 4px;
+  margin-right: 3px;
   position: relative;
 }
 
-.social-list .social-item {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--social-button-darkblue);
-  position: relative;
-}
-
-.social-list .social-item:hover {
-  background-color: var(--basic-red);
-}
-
-.social-list .social-item:active {
-  background-color: var(--basic-red);
-}
-
-.social-item a {
+.social-item .social-button {
   position: absolute;
   width: 44px;
   height: 44px;
   border-radius: 50%;
- background-color:transparent;
+  background-color: var(--social-button-darkblue);
+}
+
+.social-list .social-button:hover {
+  background-color: var(--basic-red);
+}
+
+.social-list .social-button:active {
+  background-color: var(--basic-red);
 }
 
 .social-item .button-vk::after {
