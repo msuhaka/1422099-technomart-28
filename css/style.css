@@ -914,6 +914,7 @@ img {
 
 .services .service-wrapper {
   margin-top: 20px;
+  padding-bottom: 47px;
   display: flex;
   justify-content: space-between;
 }
@@ -921,8 +922,6 @@ img {
 .services .service-items {
   padding: 50px 0;
   width: 240px;
-  border-right: 1px solid var(--basic-greylight);
-  margin-bottom: 54px;
 }
 
 .service-items button {
@@ -946,10 +945,9 @@ img {
 .service-wrapper .service-list {
   position: relative;
   flex-grow: 1;
-  margin-bottom: 54px;
-  margin-left: 80px;
-  margin-top: 50px;
-  margin-right: auto;
+  padding-left: 80px;
+  padding-top: 50px;
+  box-shadow: -21px 0px 10px -10px var(--box-shadow);
 }
 
 .service-list li {
