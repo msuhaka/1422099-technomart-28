@@ -212,17 +212,17 @@
         <div class="service-wrapper">
           <ul class="service-items list-reset">
             <li>
-              <button class="service-button" type="button">Доставка</button>
+              <button class="service-button-1 active-button" type="button">Доставка</button>
             </li>
             <li>
-              <button class="service-button" type="button">Гарантия</button>
+              <button class="service-button-2" type="button">Гарантия</button>
             </li>
             <li>
-              <button class="service-button" type="button">Кредит</button>
+              <button class="service-button-3" type="button">Кредит</button>
             </li>
           </ul>
           <ul class="service-list list-reset">
-            <li class="delivery">
+            <li class="delivery service-active">
               <h3>Доставка</h3>
               <p class="service-paragraph">
                 Мы с удовольствием доставим ваш товар прямо<br>
@@ -241,7 +241,7 @@
                 Дом уж восстановите как-нибудь сами.
               </p>
             </li>
-            <li class="credit active">
+            <li class="credit">
               <h3>Кредит</h3>
               <p>
                 Залезть в долговую яму стало проще!<br>
@@ -279,7 +279,7 @@
           <img src="img/location-map.png" width="300" height="158"
             alt="город Санкт-Петербург улица Большая Конюшенная дом 19 корпус 8">
         </a>
-        <a class="button" href="">Заблудились? Напишите нам!</a>
+        <a class="button button-write-us" href="">Заблудились? Напишите нам!</a>
       </div>
       </div>
     </section>
@@ -338,10 +338,10 @@
             htmlacademy.ru
           </a>
         </p>
-      </div>
+      </div>s
     </div>
   </footer>
-  <section class="popup modal-write-us">
+  <section class="popup modal-write-us popup-off">
       <button class="closing-button" type="button"><span class="visually-hidden">Закрыть форму оформления
           заявки</span></button>
       <h2 class="visually-hidden">Форма оформления заявки</h2>
@@ -349,15 +349,15 @@
         <div class="top-popup  container-modal">
           <p class="input-name">
             <label for="order-name">Ваше имя:</label>
-            <input type="text" id="order-name" name="name" placeholder="Имя Фамилия">
+            <input class="order-name" type="text" id="order-name" name="name" placeholder="Имя Фамилия" required>
           </p>
           <p class="input-mail">
             <label for="order-email">Ваш e-mail:</label>
-            <input type="email" name="email" id="order-email" placeholder="email@example.com">
+            <input class="order-email" type="email" name="email" id="order-email" placeholder="email@example.com" required>
           </p>
           <p class="input-textarea">
             <label for="order-text">Текст письма:</label>
-            <textarea name="message" id="order-text" cols="30" rows="6" placeholder="В свободной форме"></textarea>
+            <textarea class="order-message" name="message" id="order-text" cols="30" rows="6" placeholder="В свободной форме" required></textarea>
           </p>
         </div>
         <div class="bottom-popup">
@@ -372,6 +372,11 @@
       width="944" height="449" allowfullscreen="" title="город Санкт-Петербург улица Большая Конюшенная дом 19 корпус 8"
       tabindex="0"></iframe>
   </section>
+
+  <script src="js/write-us.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/slider.js"></script>
+
 
 </body>
 
