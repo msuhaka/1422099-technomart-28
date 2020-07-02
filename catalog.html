@@ -108,10 +108,10 @@
               </div>
               <div class="price-controls">
                 <label for="min-price">
-                  <input type="number" name="max-price" min="0" max="29500" value="0" step="500">
+                  <input type="number" id="min-price" name="price-range" min="0" max="29500" value="0" step="500">
                 </label>
                 <label for="max-price">
-                  <input type="number" name="max-price" min="500" max="30000" value="30000" step="500">
+                  <input type="number" id="max-price" name="price-range" min="500" max="30000" value="30000" step="500">
                 </label>
               </div>
             </div>
@@ -133,7 +133,7 @@
                 <label class="checkbox-title" for="filter-makita">Makita</label>
               </li>
               <li>
-                <input class="checkbox-item visually-hidden" type="checkbox" name="Dewalt" id="filter-dewalt" disabled>
+                <input class="checkbox-item visually-hidden" type="checkbox" name="Dewalt" id="filter-dewalt">
                 <label class="checkbox-title" for="filter-dewalt">Dewalt</label>
               </li>
               <li>
@@ -152,7 +152,7 @@
               </li>
               <li>
                 <input class="radio-input-item visually-hidden" type="radio" name="power-type" id="filter-electricity"
-                  value="Сетевые" disabled>
+                  value="Сетевые">
                 <label class="radio-input-title" for="filter-electricity">Сетевые</label>
               </li>
             </ul>
@@ -165,7 +165,7 @@
           <h5>Сортировка:</h5>
           <ul class="sort-list list-reset">
             <li>
-              <a class="sort-item" href="">По цене</a>
+              <a class="sort-item active" href="">По цене</a>
             </li>
             <li>
               <a class="sort-item" href="">По типу</a>
@@ -174,15 +174,15 @@
               <a class="sort-item" href="">По функционалу</a>
             </li>
             <li>
-              <a class="sort-up up-down" href="">
-                <svg fill="#c5c5c5" width="11" height="10" viewBox="0 0 11 10">
+              <a href="">
+                <svg class="up-down active" fill="#c5c5c5" width="11" height="10" viewBox="0 0 11 10">
                   <path d="M5.5 0L0 10h11z" /></svg>
                 <span class="visually-hidden">Сортировка по возрастанию</span>
               </a>
             </li>
             <li>
-              <a class="sort-down up-down" href="">
-                <svg fill="#c5c5c5" width="11" height="10" viewBox="0 0 11 10">
+              <a href="">
+                <svg class="up-down" fill="#c5c5c5" width="11" height="10" viewBox="0 0 11 10">
                   <path d="M5.5 10L0 0h11" /></svg>
                 <span class="visually-hidden">Сортировка по убыванию</span>
               </a>
@@ -310,16 +310,16 @@
         </ul>
         <ul class="pagination list-reset">
           <li>
-            <a href="">1</a>
+            <a class="pagination-1 active" href="">1</a>
           </li>
           <li>
-            <a href="">2</a>
+            <a class="pagination-2" href="">2</a>
           </li>
           <li>
-            <a href="">3</a>
+            <a class="pagination-3" href="">3</a>
           </li>
           <li>
-            <a class="next-button" href="">Следующая</a>
+            <a class="pagination-next" href="">Следующая</a>
           </li>
         </ul>
       </section>
