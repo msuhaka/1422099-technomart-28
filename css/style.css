@@ -96,13 +96,13 @@ img {
 }
 
 
-.header {
+.page-body .header {
   position: relative;
   background-color: var(--basic-background);
   padding-bottom: 60px;
 }
 
-.header-top {
+.page-body .header-top {
   width: 100%;
   margin-bottom: 41px;
   background-color: var(--basic-darkblue);
@@ -119,6 +119,7 @@ img {
 
 .header-top .container {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-end;
   font-size: 18px;
   line-height: 24px;
@@ -231,7 +232,7 @@ img {
 /*----------------basket-button----------------*/
 
 .header-top .basket-button {
-  padding: 9px 26px 9px 49px;
+  padding: 9px 25px 9px 35px;
   position: relative;
 }
 
@@ -253,7 +254,7 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 26px;
+  left: 12px;
   opacity: 0.4;
 }
 
@@ -286,8 +287,9 @@ img {
 
 /*-------------------------- header-middle ------------------------*/
 
-.header-middle {
+.header .header-middle {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
@@ -298,9 +300,16 @@ img {
   margin-top: 0;
   font-size: 16px;
   line-height: 23px;
-  font-weight: normal;
+  font-weight: 400;
   font-style: italic;
   color: var(--basic-red);
+}
+
+.header-middle .call-us {
+  max-width: 290px;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
 }
 
 .call-us .tel {
@@ -310,8 +319,12 @@ img {
   font-weight: bold;
   color: var(--basic-red);
   border: 3px solid var(--basic-white);
-  padding: 7px 45px 8px 74px;
-  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 74px;
+  padding-right: 39px;
 }
 
 .call-us .tel::before {
@@ -331,13 +344,6 @@ img {
   font-size: 14px;
   color: var(--special-darkblue);
   text-align: center;
-  margin-top: 10px;
-
-}
-
-.header-middle .call-us {
-  margin-right: auto;
-  margin-top: 7px;
 }
 
 /*---------------- уголок пользовтеля---------------------- */
@@ -388,9 +394,9 @@ img {
 
 .header-middle .user-profile {
   max-width: 300px;
-  margin-left: auto;
   display: flex;
   flex-wrap: wrap;
+  align-content: baseline;
   position: relative;
 }
 
@@ -403,8 +409,7 @@ img {
 }
 
 .profile-navigation a {
-  margin: 0 auto;
-  padding: 7px 0;
+  padding: 4px 0;
   color: var(--special-darkblue);
   font-size: 16px;
   line-height: 18px;
@@ -418,10 +423,9 @@ img {
   background-color: var(--basic-darkblue);
   border-radius: 50%;
   display: inline-block;
-  margin: 2px 12px; 
+  margin: 2px 12px;
   cursor: pointer;
 }
-
 
 .profile-navigation:hover .user-orders::after {
   background-color: var(--basic-red);
@@ -437,7 +441,6 @@ img {
   justify-content: center;
   margin: 0px auto;
   position: relative;
-  margin-bottom: 10px;
 }
 
 .user-profile a:hover,
@@ -554,11 +557,15 @@ img {
 
 .category-list .category-delivery {
   grid-column: 3/4;
-  grid-row: 3/-1;
+  grid-row: 3/4;
 }
 
 .category-list li {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .page-body .new::before {
@@ -584,7 +591,9 @@ img {
   line-height: 30px;
   font-weight: bold;
   color: var(--basic-white);
-  margin: 20px 23px 14px 23px;
+  margin: 0;
+  padding-left: 23px;
+  padding-right: 114px;
 }
 
 .category-list .promo-button {
@@ -597,7 +606,7 @@ img {
   padding: 10px;
   margin-left: 23px;
   text-align: center;
-  display: block;
+  margin-top: 14px;
 }
 
 .category-list .promo-button:hover {
@@ -614,7 +623,6 @@ img {
 .category-list .category-material {
   position: relative;
   background-color: var(--special-orange);
-  z-index: 2;
 }
 
 .category-list .category-material::after {
@@ -699,6 +707,49 @@ img {
 
 /*---------------стилизация слайдера--------------*/
 
+.category-list .slider-box {
+  position: relative;
+}
+
+.slider-box .previous-slide {
+  height: 100%;
+  width: 20px;
+  background-color: transparent;
+  background-image: url('../img/icon-left.svg');
+  background-repeat: no-repeat;
+  background-position-y: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  cursor: pointer;
+  border: 20px solid transparent;
+  outline: none;
+}
+
+.slider-box .next-slide {
+  height: 100%;
+  width: 20px;
+  background-color: transparent;
+  background-image: url('../img/icon-right.svg');
+  background-repeat: no-repeat;
+  background-position-y: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  border: 20px solid transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.slider-list .slide-button:hover {
+  opacity: 0.5;
+}
+
+
 .slider-list li {
   display: none;
   height: 100%;
@@ -735,47 +786,18 @@ img {
 }
 
 .slider-controls button:focus {
-  outline: 1px solid var(--basic-white);
+  outline: none;
 }
 
 .slider-controls .active {
   background-color: var(--basic-red);
 }
 
-
-.slider-box .slider-list::before {
-  content: '';
-  width: 22px;
-  height: 40px;
-  background-image: url('../img/icon-left.svg');
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 0;
-  bottom: 104px;
-  padding: 10px;
-  cursor: pointer;
-  border: 20px solid transparent;
-}
-
-.slider-box .slider-list::after {
-  content: '';
-  width: 22px;
-  height: 40px;
-  background-image: url('../img/icon-right.svg');
-  background-repeat: no-repeat;
-  position: absolute;
-  right: 0;
-  bottom: 104px;
-  padding: 10px;
-  border: 20px solid transparent;
-  cursor: pointer;
-}
-
-.slider-list li:first-child {
+.slider-list .item-1 {
   background: url('../img/worker-1.jpg');
 }
 
-.slider-list li:last-child {
+.slider-list .item-2 {
   background: url('../img/worker-2.jpg');
 }
 
@@ -836,6 +858,7 @@ img {
   margin: 0 auto 0 0;
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
   color: var(--special-darkblue);
 }
@@ -893,6 +916,7 @@ img {
 .main-page .useful-info-1 {
   margin-top: 50px;
   background-color: var(--basic-background);
+  padding-bottom: 47px;
 
 }
 
@@ -901,6 +925,7 @@ img {
   padding-top: 64px;
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   color: var(--basic-black);
   text-transform: uppercase;
 }
@@ -916,7 +941,6 @@ img {
 
 .services .service-wrapper {
   margin-top: 20px;
-  padding-bottom: 47px;
   display: flex;
   justify-content: space-between;
 }
@@ -931,16 +955,15 @@ img {
   content: '';
   height: 100%;
   width: 10px;
-  background-image: url('../img/shadow-line.svg');
+  background-image: url('../img/shadow-line.png');
   background-repeat: no-repeat;
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.service-items .service-button-1,
-.service-items .service-button-2,
-.service-items .service-button-3 {
+
+.service-items .service-button {
   width: 240px;
   padding-left: 22px;
   padding-top: 14px;
@@ -954,22 +977,21 @@ img {
   outline: none;
 }
 
-.service-items .service-button-1:hover,
-.service-items .service-button-2:hover,
-.service-items .service-button-3:hover {
+
+.service-items .service-button:hover {
   background-color: var(--basic-darkblue);
   color: var(--basic-white);
   border-bottom: 1px solid var(--basic-darkblue);
 }
 
-.service-items .active-button {
+.service-items .active {
   background-color: var(--basic-white);
   color: var(--special-darkblue);
   border-top: 1px solid var(--basic-white);
   border-bottom: 1px solid var(--basic-white);
-} 
+}
 
-.service-items .active-button:hover {
+.service-items .active:hover {
   background-color: var(--basic-white);
   color: var(--special-darkblue);
   border-top: 1px solid var(--basic-white);
@@ -983,13 +1005,13 @@ img {
   padding-top: 50px;
 }
 
-.service-list li {
+.service-list .service-type {
   display: none;
   position: relative;
 
 }
 
-.service-list li.service-active {
+.service-list .active {
   display: block;
 }
 
@@ -998,6 +1020,7 @@ img {
   margin-bottom: 30px;
   font-size: 36px;
   line-height: 24px;
+  font-weight: 400;
   color: var(--basic-darkblue);
   text-transform: uppercase;
   position: relative;
@@ -1081,10 +1104,16 @@ img {
 
 .useful-info .features {
   width: 457px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
 .useful-info .contacts {
   width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
 .features h2,
@@ -1092,6 +1121,7 @@ img {
   margin: 0;
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   color: var(--basic-black);
   text-transform: uppercase;
 }
@@ -1124,8 +1154,8 @@ img {
 }
 
 .contacts p {
-  padding-top: 24px;
   margin: 0;
+  margin-top: 24px;
   font-size: 13px;
   font-family: 'PT Sans', 'Tahoma', sans-serif;
   color: var(--basic-black);
@@ -1142,6 +1172,7 @@ img {
 .features .transport-partners {
   padding-bottom: 20px;
   position: relative;
+  width: 100%;
 }
 
 .features .button {
@@ -1161,6 +1192,22 @@ img {
   background-color: var(--basic-red);
   text-transform: uppercase;
   padding: 10px 60px;
+}
+
+.contacts .button-write-us {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  text-transform: uppercase;
+  align-self: flex-end;
+}
+
+.contacts .link-map {
+  align-self: flex-end;
 }
 
 .contacts img {
@@ -1355,13 +1402,13 @@ img {
   margin: 0;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+.price-controls input[type='number']::-webkit-outer-spin-button,
+.price-controls input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-input[type="number"] {
+.price-controls input[type='number'] {
   -moz-appearance: textfield;
 }
 
@@ -1377,7 +1424,7 @@ input[type="number"] {
   padding-left: 30px;
 }
 
-.checkbox-item:disabled + .checkbox-title {
+.checkbox-item:disabled+.checkbox-title {
   opacity: 0.4;
 }
 
@@ -1393,23 +1440,23 @@ input[type="number"] {
   top: -2px;
 }
 
-.checkbox-item:checked + .checkbox-title::before {
+.checkbox-item:checked+.checkbox-title::before {
   background-image: url('../img/checkbox-on.svg');
 }
 
-.checkbox-item:hover + .checkbox-title::before {
+.checkbox-item:hover+.checkbox-title::before {
   opacity: 1;
   cursor: pointer;
 }
 
-.checkbox-item:focus + .checkbox-title::before {
+.checkbox-item:focus+.checkbox-title::before {
   opacity: 1;
   width: 23px;
   box-shadow: 0 0 0 1px var(--basic-black);
   cursor: pointer;
 }
 
-.checkbox-item:disabled + .checkbox-title::before {
+.checkbox-item:disabled+.checkbox-title::before {
   opacity: 1;
   cursor: not-allowed;
 }
@@ -1417,7 +1464,8 @@ input[type="number"] {
 /*-----------radio check----------------*/
 
 .radio-input-title::before {
-  content: '';;
+  content: '';
+  ;
   width: 25px;
   height: 25px;
   background-image: url('../img/radio-off.svg');
@@ -1428,27 +1476,27 @@ input[type="number"] {
   top: -2px;
 }
 
-.radio-input-item:disabled + .radio-input-title {
+.radio-input-item:disabled+.radio-input-title {
   opacity: 0.4;
 }
 
-.radio-input-item:checked + .radio-input-title::before {
+.radio-input-item:checked+.radio-input-title::before {
   background-image: url('../img/radio-on.svg');
 }
 
-.radio-input-item:hover + .radio-input-title::before {
+.radio-input-item:hover+.radio-input-title::before {
   opacity: 1;
   cursor: pointer;
 }
 
-.radio-input-item:focus + .radio-input-title::before {
+.radio-input-item:focus+.radio-input-title::before {
   opacity: 1;
   box-shadow: 0 0 0 1px var(--basic-black);
   border-radius: 50%;
   cursor: pointer;
 }
 
-.radio-input-item:disabled + .radio-input-title::before {
+.radio-input-item:disabled+.radio-input-title::before {
   opacity: 1;
   cursor: not-allowed;
 }
@@ -1467,8 +1515,9 @@ input[type="number"] {
 /*---------item-description--------------*/
 
 .item-description p {
+  padding-top: 20px;
   padding-right: 30px;
-  padding-bottom: 68px;
+  padding-bottom: 5px;
   margin: 0;
   font-family: 'PT Sans', 'Tahoma', sans-serif;
   font-size: 13px;
@@ -1476,11 +1525,12 @@ input[type="number"] {
 }
 
 .item-description h2 {
-  padding-top: 64px;
-  padding-bottom: 25px;
+  padding-top: 25px;
+  padding-bottom: 5px;
   margin: 0;
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
   color: var(--basic-black);
   background-color: var(--basic-background);
@@ -1489,6 +1539,8 @@ input[type="number"] {
 .main-catalog .item-description {
   width: 100%;
   background-color: var(--basic-background);
+  padding-bottom: 60px;
+  padding-top: 40px;
 }
 
 .catalog-top-wrapper .page-title {
@@ -1498,6 +1550,7 @@ input[type="number"] {
   padding-left: 29px;
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
   color: var(--special-darkblue);
   background-color: var(--basic-background);
@@ -1527,24 +1580,24 @@ input[type="number"] {
 /*------------------Полоска сортировки----------------------*/
 
 .sort h5 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 18px;
+  padding: 10px 18px;
+  align-self: center;
 }
 
 .catalog .sort {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .sort .sort-list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  margin-left: 140px;
+  flex-grow: 1;
 }
 
-.sort-list li {
+.sort-direction li {
   margin-right: 17px;
 }
 
@@ -1575,10 +1628,18 @@ input[type="number"] {
   margin-right: 45px;
 }
 
-.sort-list .up-down:hover {
+.sort .sort-direction {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.up-down:hover svg {
   fill: var(--basic-black);
 }
-.sort-list .up-down:active {
+
+.up-down:active svg {
   fill: var(--basic-red);
 }
 
@@ -1589,6 +1650,13 @@ input[type="number"] {
   fill: var(--basic-red);
 }
 
+.up-down.active svg {
+  fill: var(--basic-red);
+}
+
+.up-down.active:hover svg {
+  fill: var(--basic-black);
+}
 
 /*---------------Карточки с товаром--------------------*/
 
@@ -1746,12 +1814,12 @@ input[type="number"] {
   height: 0;
   border-style: solid;
   border-width: 19px 0 19px 20px;
-  border-color: var( --basic-white) var( --basic-white) var( --basic-white) var( --basic-red);
+  border-color: transparent transparent transparent var(--basic-red);
   position: absolute;
   bottom: 0;
   right: 0;
   transform: translateX(100%);
-  }
+}
 
 
 /*---------------------------pagination---------------------------------*/
@@ -1804,7 +1872,7 @@ input[type="number"] {
 
 .page-body .popup {
   box-shadow: 0 0 10px var(--box-shadow);
-  border-top:7px solid  var(--basic-red);
+  border-top: 7px solid var(--basic-red);
   background-color: var(--basic-white);
   position: fixed;
   top: 50%;
@@ -1850,6 +1918,7 @@ input[type="number"] {
 }
 
 @keyframes shake {
+
   0%,
   100% {
     transform: translateX(0);
@@ -1874,7 +1943,7 @@ input[type="number"] {
 /*-------------------- popup in index -------------------------*/
 
 .popup-off {
-  display: none ;
+  display: none;
 }
 
 .popup-show {
@@ -1885,8 +1954,6 @@ input[type="number"] {
 .modal-error {
   animation: shake 0.6s;
 }
-
-
 
 .modal-write-us .container-modal {
   width: 460px;
@@ -1926,7 +1993,7 @@ input[type="number"] {
   position: relative;
   background-color: var(--basic-white);
   width: 621px;
-  
+
 }
 
 .modal-write-us p {
@@ -1955,10 +2022,6 @@ input[type="number"] {
   border: none;
 }
 
-.map-popup {
-  display: none;
-}
-
 .map-popup iframe {
   border: none;
 }
@@ -1967,8 +2030,9 @@ input[type="number"] {
 
 .catalog-page .modal-buying-notice {
   width: 620px;
-  display: none;
 }
+
+
 
 .catalog-page .bottom-popup {
   background-color: var(--background-modal-2);
@@ -2106,13 +2170,14 @@ input[type="number"] {
   color: var(--basic-white);
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 
 .footer-bottom .copyright {
-  width: 234px;
+  max-width: 234px;
   margin: 0;
-  margin-right: 161px;
+  margin-right: auto;
 }
 
 .footer-bottom .contact-mail {
@@ -2122,17 +2187,23 @@ input[type="number"] {
 
 .footer-bottom .contact-site {
   width: min-content;
-  margin-left: 51px;
+  margin-left: 50px;
   margin-top: 0;
 }
 
-/* ----------далее пойдут стили кнопок соц сетей-------------*/
+/* ----------кнопки соц сетей-------------*/
+
+.footer-bottom .socials {
+  display: flex;
+}
 
 .footer-bottom .social-list {
   margin-right: auto;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   position: relative;
+  padding: 0 10px;
 }
 
 .social-list li {
@@ -2183,4 +2254,3 @@ input[type="number"] {
   height: 21px;
   background-image: url('../img/icon-insta.svg');
 }
-
