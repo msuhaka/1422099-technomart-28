@@ -765,6 +765,7 @@ img {
 }
 
 .slider-list .slider-controls {
+
   display: flex;
   justify-content: space-around;
   position: absolute;
