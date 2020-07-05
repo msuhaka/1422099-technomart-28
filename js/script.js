@@ -141,7 +141,7 @@ serviceButton.forEach(function (entry) {
     openService(event, 'credit');
     openService(event, 'delivery'); 
     });
-});w
+});
 
 
 function openService(evt, serviceName) {
