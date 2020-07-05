@@ -173,16 +173,18 @@
             <li>
               <a class="sort-item" href="">По функционалу</a>
             </li>
+          </ul>
+          <ul class="sort-direction list-reset">
             <li>
-              <a href="">
-                <svg class="up-down active" fill="#c5c5c5" width="11" height="10" viewBox="0 0 11 10">
+              <a class="up-down active" href="">
+                <svg fill="#c5c5c5" width="11" height="10" viewBox="0 0 11 10">
                   <path d="M5.5 0L0 10h11z" /></svg>
                 <span class="visually-hidden">Сортировка по возрастанию</span>
               </a>
             </li>
             <li>
-              <a href="">
-                <svg class="up-down" fill="#c5c5c5" width="11" height="10" viewBox="0 0 11 10">
+              <a class="up-down" href="">
+                <svg fill="#c5c5c5" width="11" height="10" viewBox="0 0 11 10">
                   <path d="M5.5 10L0 0h11" /></svg>
                 <span class="visually-hidden">Сортировка по убыванию</span>
               </a>
@@ -310,16 +312,16 @@
         </ul>
         <ul class="pagination list-reset">
           <li>
-            <a class="pagination-1 active" href="">1</a>
+            <a class="pagination active" href="">1</a>
           </li>
           <li>
-            <a class="pagination-2" href="">2</a>
+            <a class="pagination" href="">2</a>
           </li>
           <li>
-            <a class="pagination-3" href="">3</a>
+            <a class="pagination" href="">3</a>
           </li>
           <li>
-            <a class="pagination-next" href="">Следующая</a>
+            <a class="pagination" href="">Следующая</a>
           </li>
         </ul>
       </section>
@@ -397,7 +399,7 @@
       </div>
     </div>
   </footer>
-  <section class="popup modal-buying-notice">
+  <section class="popup modal-buying-notice popup-off">
       <button class="closing-button" type="button"><span class="visually-hidden">Закрыть уведомление</span></button>
       <h3>Товар добавлен в корзину!</h3>
     <div class="bottom-popup">
@@ -405,6 +407,7 @@
       <a class="white-button" href="">Продолжить покупки</a>
     </div>
   </section>
+  <script src="js/modalCatalog.js"></script>
 </body>
 
 </html>
