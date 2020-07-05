@@ -745,10 +745,9 @@ img {
   outline: none;
 }
 
-.slider-list .slide-button:hover {
+.slider-box .slide-button:hover {
   opacity: 0.5;
 }
-
 
 .slider-list li {
   display: none;
@@ -764,8 +763,7 @@ img {
   height: 100%;
 }
 
-.slider-list .slider-controls {
-
+.slider-box .slider-controls {
   display: flex;
   justify-content: space-around;
   position: absolute;
