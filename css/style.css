@@ -423,6 +423,7 @@ img {
   background-color: var(--basic-darkblue);
   border-radius: 50%;
   display: inline-block;
+  vertical-align: middle;
   margin: 2px 12px;
   cursor: pointer;
 }
