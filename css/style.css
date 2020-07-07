@@ -945,7 +945,7 @@ img {
 }
 
 .services .service-items {
-  padding: 50px 0;
+  padding: 55px 0;
   width: 240px;
   position: relative;
 }
@@ -1001,7 +1001,7 @@ img {
   position: relative;
   flex-grow: 1;
   padding-left: 80px;
-  padding-top: 50px;
+  padding-top: 55px;
 }
 
 .service-list .service-type {
@@ -1076,7 +1076,7 @@ img {
   background-image: url('../img/warranty.png');
   background-repeat: no-repeat;
   position: absolute;
-  top: -25px;
+  top: -35px;
   right: -100px;
   z-index: 1;
 }
