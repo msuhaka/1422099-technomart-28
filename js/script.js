@@ -14,27 +14,27 @@ var makeOrder = document.querySelector('.order-button');
 var makeShopping = document.querySelector('.shopping-button');
 
 buyLink.forEach(function (entry) {
-    entry.addEventListener("click", function (event){
-      event.preventDefault();
-      console.log('Открой модальное окно');
-      modalNotice.classList.add('popup-show');
-    });
+  entry.addEventListener('click', function (event) {
+    event.preventDefault();
+    console.log('Открой модальное окно');
+    modalNotice.classList.add('popup-show');
+  });
 });
 
 closeNotice.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    console.log('Закрой модальное окно');
-    modalNotice.classList.remove('popup-show');
+  evt.preventDefault();
+  console.log('Закрой модальное окно');
+  modalNotice.classList.remove('popup-show');
 });
 
 window.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === 27) {
-      if (modalNotice.classList.contains('popup-show')) {
-        evt.preventDefault();
-        console.log('Закрой модальное окно кнопкой ESC');
-        modalNotice.classList.remove('popup-show');
-      }
+  if (evt.keyCode === 27) {
+    if (modalNotice.classList.contains('popup-show')) {
+      evt.preventDefault();
+      console.log('Закрой модальное окно кнопкой ESC');
+      modalNotice.classList.remove('popup-show');
     }
+  }
 });
 
 /*--------------------------Всплывающая Форма-------------------------*/
@@ -60,7 +60,7 @@ writeUs.addEventListener('click', function (evt) {
 });
 
 closeButton.forEach(function (entry) {
-  entry.addEventListener("click", function (event) {
+  entry.addEventListener('click', function (event) {
     event.preventDefault();
     console.log('Закрой модальное окно');
     writeForm.classList.remove('popup-show');
@@ -115,6 +115,7 @@ window.addEventListener('keydown', function (evt) {
 /*-----------------------------------slider-------------------------------------*/
 var prev = document.querySelector('.previous-slide');
 var next = document.querySelector('.next-slide');
+var dot = document.querySelectorAll('.dot');
 
 prev.addEventListener('click', function (event) {
   console.log('Нажата кнопка previous')
@@ -124,6 +125,14 @@ prev.addEventListener('click', function (event) {
 next.addEventListener('click', function (event) {
   console.log('Нажата кнопка next')
   plusSlides(1)
+});
+
+dot.forEach(function (rangeSlide) {
+  rangeSlide.addEventListener('click', function (event) {
+    event.preventDefault();
+    console.log('Нажат кружок на слайдере')
+    plusSlides(-1)
+  });
 });
 
 var slideIndex = 1;
